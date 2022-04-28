@@ -381,6 +381,7 @@ button {
 
 .hosting {
      padding-top: 90px;
+	 background: #0e0f22;
 }
 
 .web_hosting {
@@ -424,7 +425,6 @@ button {
 /** Services section **/
 
 .Services {
-     margin-top: 90px;
      padding: 60px 0;
      background: #0c0f38;
      font-family: Poppins;
