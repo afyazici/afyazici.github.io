@@ -84,57 +84,34 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-				  <figure><img  src="basicpentestingimages/service3.png"></figure>
-					 <h2>Basic Pentesting</h2>
+				  <figure><img  src="dirbimages/dirb.png"></figure>
+					 <h2>Dirb</h2>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-12">
                   <div class="web_hosting">
-					 <h1>1. Web App Testing and Privilege Escalation</h1>
-					 <h3>First, we start the machine and perform nmap scanning.</h3>
-					 <figure><img  src="basicpentestingimages/1.PNG"/></figure>
-					 <h3>It's using http on port 80. We go to the website.</h3>
-					 <figure><img  src="basicpentestingimages/2.PNG"/></figure>
-					 <h3>There is nothing on the page. When we look at the source code, we see something suspicious.</h3>
-					 <figure><img  src="basicpentestingimages/3.PNG"/></figure>
-					 <h3>We start scanning the files on the web page.</h3>
-					 <figure><img  src="basicpentestingimages/4.PNG"/></figure>
-					 <h3>We see a hidden folder named /development in the scan output.</h3>
-					 <figure><img  src="basicpentestingimages/5.PNG"/></figure>
-					 <figure><img  src="basicpentestingimages/6.PNG"/></figure>
-					 <figure><img  src="basicpentestingimages/7.PNG"/></figure>
-					 <h3>We know that SMB is used. For this reason, we can use <strong>enum4linux -a 10.0.186.96</strong>.</h3>
-					 <figure><img  src="basicpentestingimages/8.PNG"/></figure>
-					 <h3>Now we know the usernames</h3>
-					 <h3>We remember the text written in the j.txt file. K asks J to change his password because his password is weak. That's why we're trying to crack J's password.</h3>
-					 <h3>We use Hydra for this.</h3>
-					 <h3>We run the command <strong>hydra -l jan -P /usr/share/wordlists/rockyou.txt.gz ssh://10.10.186.96</strong>.</h3>
-					 <figure><img  src="basicpentestingimages/9.PNG"/></figure>
-					 <figure><img  src="basicpentestingimages/cevap1.PNG"/></figure>
-					 <h3>So we get the Jan's password.</h3>
-					 <h3>Now we can login via SSH.</h3>
-					 <h3>Question 8 asks us to find a way of privilege escalation.</h3>
-					 <h3>We're looking at the file of our other user, Kay.</h3>
-					 <h3>When we want to print the file named pass.bak in the files, our authority is insufficient.</h3>
-					 <figure><img  src="basicpentestingimages/10.PNG"/></figure>
-					 <h3>When we view the permissions of the files, we see a hidden folder named .ssh. This folder contains the id_rsa file.</h3>
-					 <figure><img  src="basicpentestingimages/11.PNG"/></figure>
-					 <h3>We can get the RSA encryption key with the <strong>cat id_rsa</strong> command.</h3>
-					 <h3>We copy this key to our desktop with <strong>nano</strong>.</h3>
-					 <figure><img  src="basicpentestingimages/12.PNG"/></figure>
-					 <h3>We give read permission to the file with <strong>chmod 600 kay_id_rsa</strong>.</h3>
-					 <h3>Then we parse this key with John the Ripper.</h3>
-					 <h3>We make it clearer for the John the Ripper tool with the next command. We save our file with the name john.txt.</h3>
-					 <figure><img  src="basicpentestingimages/13.PNG"/></figure>
-					 <h3>With the command <strong>sudo john –wordlist=/usr/share/wordlists/rockyou.txt john.txt</strong>, a brute force attack is made to find the password. It seems that our password is <strong>beeswax</strong>.</h3>
-					 <figure><img  src="basicpentestingimages/14.PNG"/></figure>
-					 <h3>Then we connect to kay user's account via ssh.</h3>
-					 <figure><img  src="basicpentestingimages/15.PNG"/></figure>
-					 <h3>We print it with the <strong>cat pass.bak</strong> command.</h3>
-					 <figure><img  src="basicpentestingimages/16.PNG"/></figure>
-					 <figure><img  src="basicpentestingimages/cevap2.PNG"/></figure>
+					 <p>DIRB is a Web content browser. The link you will give it will be scanned on a dictionary-based basis, links, etc. will be displayed. It is a tool that extracts and lists it to you.</p>
+					 <h1>Dirb Tool Example Usage</h1>
+					 <figure><img  src="nmapimages/dirb1.PNG"/></figure>
+					 <p>After typing dirb, we can start scanning by specifying the target, provided that we have <strong>"http://" or "https://"</strong> at the beginning.</p>
+					 <h1>Scan Results</h1>
+					 <figure><img  src="nmapimages/dirb2.PNG"/></figure>
+					 <p>When the scanning process starts, it gives information about the start time, the scanned url or ip address, the wordlist file used.</p>
+					 <p>It gives us information about the results of which directories and which pages it can reach.</p>
+					 <p>Which have been successfully achieved <strong>(CODE:200)</strong></p>
+					 <p>Which ones have access ban <strong>(CODE: 403)</strong> gives information about this.</p>
+					 <p>SIZE: section, it gives how many characters the page content consists of. This information will work for you most of the time.</p>
+					 <figure><img  src="nmapimages/dirb2.PNG"/></figure>
+					 <p>DIRB does a dictionary-based search. In this, it uses the dictionaries that come as default. If we use it as in the example usage on the previous page, 4612 words will use the common.txt file. To make this scan more comprehensive and get more results;</p>
+					 <p><strong>dirb http://site.com /usr/share/dirb/wordlists/big.txt</strong></p>
+					 <p><strong>dirb http://127.0.0.1 /usr/share/dirb/wordlists/big.txt</strong></p>
+					 <p>By guiding a larger wordlist file like the one above (20,458 words), we can enable it to perform a more comprehensive search. To keep the results we need to record the actions taken.</p>
+					 <figure><img  src="nmapimages/dirb3.PNG"/></figure>
+					 <p><strong>dirb http://example.com -o output.txt</strong></p>
+					 <p><strong>dirb http://127.0.0.1 -o output.txt</strong></p>
+					 <p>After specifying our destination, we specify a file name with the -o parameter as above and want it to be saved in ".txt" format.</p>
                   </div>
                </div>
             </div>
