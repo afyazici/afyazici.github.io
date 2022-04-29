@@ -428,28 +428,28 @@ button {
 /** end Hosting section **/
 
 
-/** Services section **/
+/** Machines section **/
 
-.Services {
+.Machines {
      padding: 60px 0;
      background: #0c0f38;
      font-family: Poppins;
 }
 
-.Services .titlepage {
+.Machines .titlepage {
      text-align: center;
 }
 
-.Services .titlepage h2 {
+.Machines .titlepage h2 {
      color: #fff;
      padding-bottom: 20px;
 }
 
-.Services .titlepage p {
+.Machines .titlepage p {
      color: #fff;
 }
 
-.Services .Services-box i {
+.Machines .Machines-box i {
      background: #0000;
      width: 100px;
      height: 100px;
@@ -458,11 +458,11 @@ button {
      padding-top: 19px;
 }
 
-.Services .Services-box i:hover {
+.Machines .Machines-box i:hover {
      background: #ddd;
 }
 
-.Services .Services-box h3 {
+.Machines .Machines-box h3 {
      padding: 20px 0px 20px 0px;
      font-size: 20px;
      line-height: 25px;
@@ -471,7 +471,7 @@ button {
      font-weight: 500;
 }
 
-.Services .Services-box {
+.Machines .Machines-box {
      text-align: center;
      background-color: black;
      border-radius: 20px;
@@ -481,13 +481,13 @@ button {
      margin-bottom: 30px;
 }
 
-.Services .Services-box:hover {
+.Machines .Machines-box:hover {
      background: #8308eb;
      transition: ease-in all 0.5s;
      cursor: pointer;
 }
 
-.Services .Services-box p {
+.Machines .Machines-box p {
      font-size: 16px;
      line-height: 24px;
      color: #fff;
@@ -513,7 +513,7 @@ button {
 }
 
 
-/** end Services section **/
+/** end Machines section **/
 
 
 /** Articles section **/
