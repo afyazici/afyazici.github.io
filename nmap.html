@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Portfolio</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index.html">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#machines"> Machines</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Hosting -->
+      <div id="about" class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="nmapimages/articles1.png"></figure>
+					 <h2>Nmap</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+					 <p>Nmap, ağ tarama ve zafiyet tespiti için kullanılan açık kaynaklı bir araçtır. İsmini Network Mapper’in kısaltmasından almaktadır. Ağ yöneticileri nmap'i sistemlerinde hangi cihazların çalıştığını belirlemek, mevcut ana makineleri ve sundukları hizmetleri keşfetmek, açık bağlantı noktaları bulmak ve güvenlik risklerini taramak için kullanırlar. Nmap, yüz binlerce cihazı ve alt ağı kapsayan geniş ağların yanı sıra tek ana bilgisayarı izlemek için kullanılır.</p>
+					 <h1>Nmap Nasıl Kullanılır?</h1>
+					 <p>Temel nmap komutu oluştururken <strong>“nmap {tarama türü} {opsiyonlar} {hedef}”</strong> dizilimi temel alınır.</p>
+					 <p>Nmap’i başlatmak için komut satırına “nmap” komutunu yazmanız yeterlidir.</p>
+					 <figure><img  src="nmapimages/nmap.PNG"/></figure>
+					 <p>Nmap kullanımında tüm komutları ve işlevlerini öğrenmek için komut satırına <strong>“nmap -help” ve “nmap -h”</strong> komutunu yazabilirsiniz.</p>
+					 <h1>Nmap Hedef Belirleme:</h1>
+					 <p>Nmap taramasında hedefler farklı aralıklarda belirlenebilir. Örneğin:</p>
+					 <figure><img  src="nmapimages/nmap1.PNG"/></figure>
+					 <h1>Nmap Keşif Çalışması:</h1>
+					 <p>Ağ üzerinde bulunan ve o esnada ayakta olan cihazların analizi yapılabilir.</p>
+					 <figure><img  src="nmapimages/nmap2.PNG"/></figure>
+					 <h1>Port Tarama Teknikleri</h1>
+					 <p>TCP Connect Scan: Hedef porta bağlanmak için SYN paket gönderir, karşılığında SYN/ACK paketi gelirse ACK paketi göndererek porta bağlanır ve portun açık olduğunu rapor eder, eğer SYN paketine RST cevabı gelirse portun kapalı olduğunu rapor eder. Bu tarama türünde açılan tüm oturumların hedef sistemde logolanmaktadır.</p>
+					 <p>SYN Scan: SYN tarama oturumu tamamen açmaz, SYN paketinin karşılığında SYN/ACK paketi geldiğinde portun açık olduğunu rapor eder ve RST paketi göndererek oturumu kapatır, port kapalı ise hedef RST cevabı gönderir.</p>
+					 <p>UDP Scan: UDP portlarının açık veya kapalı olduğunu analiz eder. UDP paketine gelen cevap “ICMP Port Unreacable” ise portun kapalı olduğu; UDP paketi ise portun açık olduğu anlaşılır.</p>
+					 <h1>Port Belirleme ve Keşif Taramaları</h1>
+					 <p>Hangi portların açık olduğu, bu açık portların üzerinde çalışan servisler ve bunlarla ilgili detaylı bilgiler öğrenebilir.</p>
+					 <figure><img  src="nmapimages/nmap3.PNG"/></figure>
+					 <figure><img  src="nmapimages/nmap4.PNG"/></figure>
+					 <h1>Script Motoru:</h1>
+					 <p>Nmap içerisinde bulunan scriptler ile testleri de gerçekleştirebiliriz.</p>
+					 <figure><img  src="nmapimages/nmap5.PNG"/></figure>
+					 <h1>Çıktı Ayarlamaları</h1>
+					 <p>Yapılan analizler farklı fortmalarda dışarıya aktarılabilir.</p>
+					 <figure><img  src="nmapimages/nmap6.PNG"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Hosting -->
+	  <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                     <div class="cont">
+                        <h3>Deneme</h3>
+                        <span>Deneme</span>
+                        <p>Deneme</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2019 All Rights Reserved. <a href="https://html.design/">Free html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
