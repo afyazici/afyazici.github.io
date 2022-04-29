@@ -86,30 +86,30 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="web_hosting">
-					 <p>Nmap, ağ tarama ve zafiyet tespiti için kullanılan açık kaynaklı bir araçtır. İsmini Network Mapper’in kısaltmasından almaktadır. Ağ yöneticileri nmap'i sistemlerinde hangi cihazların çalıştığını belirlemek, mevcut ana makineleri ve sundukları hizmetleri keşfetmek, açık bağlantı noktaları bulmak ve güvenlik risklerini taramak için kullanırlar. Nmap, yüz binlerce cihazı ve alt ağı kapsayan geniş ağların yanı sıra tek ana bilgisayarı izlemek için kullanılır.</p>
-					 <h1>Nmap Nasıl Kullanılır?</h1>
-					 <p>Temel nmap komutu oluştururken <strong>“nmap {tarama türü} {opsiyonlar} {hedef}”</strong> dizilimi temel alınır.</p>
-					 <p>Nmap’i başlatmak için komut satırına “nmap” komutunu yazmanız yeterlidir.</p>
+					 <p>Nmap is an open source tool for network scanning and vulnerability detection. It takes its name from the acronym for Network Mapper. Network administrators use nmap to identify which devices are running on their systems, discover available hosts and the services they offer, find open ports, and scan for security risks. Nmap is used to monitor single host as well as large networks spanning hundreds of thousands of devices and subnets.</p>
+					 <h1>How to Use Nmap?</h1>
+					 <p>When creating the basic nmap command, the <strong>"nmap {scan type} {options} {target}"</strong> sequence is based.</p>
+					 <p>To start Nmap, simply type the <strong>"nmap"</strong> command on the command line.</p>
 					 <figure><img  src="nmapimages/nmap.PNG"/></figure>
-					 <p>Nmap kullanımında tüm komutları ve işlevlerini öğrenmek için komut satırına <strong>“nmap -help” ve “nmap -h”</strong> komutunu yazabilirsiniz.</p>
-					 <h1>Nmap Hedef Belirleme:</h1>
-					 <p>Nmap taramasında hedefler farklı aralıklarda belirlenebilir. Örneğin:</p>
+					 <p>You can write <strong>“nmap -help” and “nmap -h”</strong> command on the command line to learn all the commands and functions in using Nmap.</p>
+					 <h1>Nmap Targeting:</h1>
+					 <p>In Nmap scanning, targets can be identified at different ranges. For example:</p>
 					 <figure><img  src="nmapimages/nmap2.PNG"/></figure>
-					 <h1>Nmap Keşif Çalışması:</h1>
-					 <p>Ağ üzerinde bulunan ve o esnada ayakta olan cihazların analizi yapılabilir.</p>
+					 <h1>Exploring with Nmap</h1>
+					 <p>Ağ üzerinde o anda çalışan cihazları analiz etmek mümkündür.</p>
 					 <figure><img  src="nmapimages/nmap3.PNG"/></figure>
-					 <h1>Port Tarama Teknikleri</h1>
-					 <p>TCP Connect Scan: Hedef porta bağlanmak için SYN paket gönderir, karşılığında SYN/ACK paketi gelirse ACK paketi göndererek porta bağlanır ve portun açık olduğunu rapor eder, eğer SYN paketine RST cevabı gelirse portun kapalı olduğunu rapor eder. Bu tarama türünde açılan tüm oturumların hedef sistemde logolanmaktadır.</p>
-					 <p>SYN Scan: SYN tarama oturumu tamamen açmaz, SYN paketinin karşılığında SYN/ACK paketi geldiğinde portun açık olduğunu rapor eder ve RST paketi göndererek oturumu kapatır, port kapalı ise hedef RST cevabı gönderir.</p>
-					 <p>UDP Scan: UDP portlarının açık veya kapalı olduğunu analiz eder. UDP paketine gelen cevap “ICMP Port Unreacable” ise portun kapalı olduğu; UDP paketi ise portun açık olduğu anlaşılır.</p>
-					 <h1>Port Belirleme ve Keşif Taramaları</h1>
-					 <p>Hangi portların açık olduğu, bu açık portların üzerinde çalışan servisler ve bunlarla ilgili detaylı bilgiler öğrenebilir.</p>
+					 <h1>Port Scanning Techniques</h1>
+					 <p>TCP Connect Scan: It sends SYN packet to connect to the destination port, in return, if a SYN/ACK packet comes in, it connects to the port by sending an ACK packet and reports that the port is open, if an RST response is received to the SYN packet, it reports that the port is closed. All sessions opened in this type of scan are logged on the target system.</p>
+					 <p>SYN Scan: SYN scan session does not open completely, when SYN/ACK packet comes in return of SYN packet, it reports that the port is open and logs out by sending RST packet, if the port is closed, the target sends an RST reply.</p>
+					 <p>UDP Scan: Analyzes whether UDP ports are open or closed. If the response to the UDP packet is “ICMP Port Unreacable”, the port is closed; If it is a UDP packet, it is understood that the port is open.</p>
+					 <h1>Port Detection and Discovery Scans</h1>
+					 <p>You can learn which ports are open, the services running on these open ports and detailed information about them.</p>
 					 <figure><img  src="nmapimages/nmap4.PNG"/></figure>
-					 <h1>Script Motoru:</h1>
-					 <p>Nmap içerisinde bulunan scriptler ile testleri de gerçekleştirebiliriz.</p>
+					 <h1>Scripting</h1>
+					 <p>We can also perform tests with the scripts in Nmap.</p>
 					 <figure><img  src="nmapimages/nmap5.PNG"/></figure>
-					 <h1>Çıktı Ayarlamaları</h1>
-					 <p>Yapılan analizler farklı fortmalarda dışarıya aktarılabilir.</p>
+					 <h1>Output Adjustments</h1>
+					 <p>Analyzes can be exported in different formats.</p>
 					 <figure><img  src="nmapimages/nmap6.PNG"/></figure>
                   </div>
                </div>
