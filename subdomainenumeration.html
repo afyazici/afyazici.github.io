@@ -99,25 +99,25 @@
 					 <h1>Task 2 OSINT – SSL/TLS Certificates</h1>
 					 <h3>Go to crt.sh and search for the domain name tryhackme.com, find the entry that was logged at 2020-12-26 and enter the domain below to answer the question.</h3>
 					 <figure><img  src="images/subdomainenumerationimages/task3.PNG"/></figure>
-					 <figure><img  src="images/subdomainenumerationimages/Task4.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task4.PNG"/></figure>
 					 <h1>Task 3 OSINT – Search Engines</h1>
 					 <h3>Go to Google and use the search term -site:www.tryhackme.com  site:*.tryhackme.com, which should reveal a subdomain for tryhackme.com; use that subdomain to answer the question below.</h3>
-					 <figure><img  src="images/subdomainenumerationimages/Task5.PNG"/></figure>
-					 <figure><img  src="images/subdomainenumerationimages/Task6.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task5.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task6.PNG"/></figure>
 					 <h1>Task 4 DNS Bruteforce</h1>
-					 <figure><img  src="images/subdomainenumerationimages/Task7.PNG"/></figure>
-					 <figure><img  src="images/subdomainenumerationimages/Task8.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task7.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task8.PNG"/></figure>
 					 <h1>Task 5 OSINT – Sublist3r</h1>
 					 <h3>What we need to do at this stage is to reach the answer using Sublist3r.</h3>
-					 <figure><img  src="images/subdomainenumerationimages/Task9.PNG"/></figure>
-					 <figure><img  src="images/subdomainenumerationimages/Task10.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task9.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task10.PNG"/></figure>
 					 <h1>Task 6 Virtual Hosts</h1>
 					 <h3>When we run the first command given to us and look at the subdomains, we notice something. Most of the results have a Size of 2395.</h3>
-					 <figure><img  src="images/subdomainenumerationimages/Task11.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task11.PNG"/></figure>
 					 <h3>For this we need to filter these results.</h3>
 					 <h3>Here is the code we need to use:</h3>
 					 <h3><strong>ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.10.69.24 -fs {size}</strong></h3>
-					 <figure><img  src="images/subdomainenumerationimages/Task12.PNG"/></figure>
+					 <figure><img  src="images/subdomainenumerationimages/task12.PNG"/></figure>
                   </div>
                </div>
             </div>
