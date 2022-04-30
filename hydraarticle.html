@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Portfolio</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index.html">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#"> About Me</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="#articles"> Articles</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Hosting -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="/images/hydraimages/articles3.png"></figure>
+					 <h2>Hydra</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+					 <h1>What is Hydra?</h1>
+					 <p>Hydra is a powerful tool that comes preinstalled on Kali Linux and is used to perform Brute-Force attacks.</p>
+					 <p>Protocols Supported by Hydra:</p>
+					 <p>Asterisk, AFP, Cisco AAA, Cisco auth, Cisco enable, CVS, Firebird, FTP, HTTP-FORM-GET, HTTP-FORM-POST, HTTP-GET, HTTP-HEAD, HTTP-POST, HTTP-PROXY, HTTPS-FORM-GET, HTTPS-FORM-POST, HTTPS-GET, HTTPS-HEAD, HTTPS-POST, HTTP-Proxy, ICQ, IMAP, IRC, LDAP, MEMCACHED, MONGODB, MS-SQL, MYSQL, NCP, NNTP, Oracle Listener, Oracle SID, Oracle, PC-Anywhere, PCNFS, POP3, POSTGRES, Radmin, RDP, Rexec, Rlogin, Rsh, RTSP, SAP/R3, SIP, SMB, SMTP, SMTP Enum, SNMP v1+v2+v3, SOCKS5, SSH (v1 and v2), SSHKEY, Subversion, Teamspeak (TS2), Telnet, VMware-Auth, VNC and XMPP.</p>
+					 <h1>Hydra Installation</h1>
+					 <p>We go to the Github repository at https://github.com/vanhauser-thc/thc-hydra and copy the link from there and clone it to our system. We perform this operation by specifying the location where you want to clone.</p>
+					 <figure><img  src="/images/hydraimages/task1.PNG"/></figure>
+					 <p>After the cloning process is finished, you can install it with the <strong>"apt-get install hydra"</strong> command.</p>
+					 <p>When we come to the terminal and type hydra, we will see the output of informative texts for use.</p>
+					 <figure><img  src="/images/hydraimages/task2.PNG"/></figure>
+					 <p>For more detailed information, we can take a look at the information below by typing <strong>“hydra -help”</strong> into the terminal.</p>
+					 <h1>Hydra Attack Phase and Use</h1>
+					 <p>In the output of Hydra, which is shown to us with the help command, 4 different attack examples are shown, but these attacks can be multiplied.</p>
+					 <figure><img  src="/images/hydraimages/task3.PNG"/></figure>
+					 <p>Different protocols are attacked differently using the Hydra tool.</p>
+					 <p>• If we want to do a brute force attack on the FTP service and we know the username, we can use the following command.</p>
+					 <p><code><strong>hydra -l username -P /PATH/passwordlist.txt ftp://IP</strong></code></p>
+					 <p>• If we want to make a brute force attack on an SSH service, the command we will use is as follows;</p>
+					 <p><code><strong>hydra -l username -P /PATH/passwordlist.txt IP -t 4 ssh</strong></code></p>
+					 <p>In order for these attacks to be organized, it is necessary to know what type of request (GET or POST) is being made. In order to know this request, the source code of the page is accessed through the browser and it is understood what kind of request it is.</p>
+					 <p>If we come across a login form using a POST prompt, the command we will use will be as follows:</p>
+					 <p><code><strong>hydra -l <username> -P <wordlist> <IP> http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V</strong></code></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Hosting -->
+	  <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                     <div class="cont">
+                        <h3>Deneme</h3>
+                        <span>Deneme</span>
+                        <p>Deneme</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2019 All Rights Reserved. <a href="https://html.design/">Free html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
