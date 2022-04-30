@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Portfolio</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#"> About Me</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="#articles"> Articles</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Hosting -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="/machines/images/authenticationbypassimages/machines5.png"></figure>
+					 <h2>Authentication Bypass</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+					 <h1>Task 1 Brief</h1>
+					 <h3>We start our machine.</h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/1.PNG"/></figure>
+					 <h1>Task 2 Username Enumeration</h1>
+					 <h3>Above the question it tells us what to do.</h3>
+					 <h3>We go to (http://10.10.28.217/customers/signup). When we go to the site, we see the Acme IT Support signup page.</h3>
+					 <h3>If we write admin instead of registering here and fill in the remaining blanks randomly, it returns us as follows.</h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/2.PNG"/></figure>
+					 <h3>In the next step, we use the following command.</h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/3.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/4.PNG"/></figure>
+					 <h3>The output of the code is as follows.</h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/5.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/6.PNG"/></figure>
+					 <h1>Task 3 Brute Force</h1>
+					 <h3>At this stage, we are brute-force attacking this login panel, whose usernames we know.</h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/7.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/8.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/9.PNG"/></figure>
+					 <h3>Our answer had already appeared in the terminal.</h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/10.PNG"/></figure>
+					 <h1>Task 4 Logic Flaw</h1>
+					 <figure><img  src="/machines/images/authenticationbypassimages/11.PNG"/></figure>
+					 <h3>We're going to examine the Reset Password function of the Acme IT Support website (http://10.10.28.217/customers/reset). We see a form asking for the email address associated with the account on which we wish to perform the password reset. If an invalid email is entered, you'll receive the error message "Account not found from supplied email address".</h3>
+					 <h3>the username is submitted in a POST field to the web server, and the email address is sent in the query string request as a GET field.</h3>
+					 <h3><code>curl 'http://10.10.28.217/customers/reset?email=robert%40acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert'</code></h3>
+					 <h3>For the next step, we'll need to create an account on the Acme IT support customer section, doing so gives you a unique email address that can be used to create support tickets. The email address is in the format of {username}@customer.acmeitsupport.thm</h3>
+					 <h3>We create an account which name is user</h3>
+					 <h3>Now rerunning Curl Request 2 but with our @acmeitsupport.thm in the email field you'll have a ticket created on your account which contains a link to log you in as Robert. Using Robert's account, you can view their support tickets and reveal a flag.</h3>
+					 <h3><code>curl 'http://10.10.28.217/customers/reset?email=robert@acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert&email={username}@customer.acmeitsupport.thm'</code></h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/12.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/13.PNG"/></figure>
+					 <h3>We go to Robert's account and get our flag.</h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/14.PNG"/></figure>
+					 <h1>Task 5 Cookie Tampering</h1>
+					 <h3>We are starting to send requests to the http://10.10.28.217 page for the cookie.</h3>
+					 <figure><img  src="/machines/images/authenticationbypassimages/15.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/16.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/17.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/18.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/19.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/20.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/21.PNG"/></figure>
+					 <figure><img  src="/machines/images/authenticationbypassimages/22.PNG"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Hosting -->
+	  <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                     <div class="cont">
+                        <h3>Deneme</h3>
+                        <span>Deneme</span>
+                        <p>Deneme</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2019 All Rights Reserved. <a href="https://html.design/">Free html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
