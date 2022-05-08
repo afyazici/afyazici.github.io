@@ -36,7 +36,7 @@ html {
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Roboto', sans-serif;
+     font-family: 'Roboto';
      line-height: 1.80857;
      font-weight: normal;
 }
@@ -65,37 +65,44 @@ h6 {
      font-weight: normal;
      line-height: normal;
      color: #ffffff;
+	 font-family: monospace;
      margin: 0
 }
 
 h1 {
      font-size: 24px
 	 color: #ffffff;
+	 font-family: monospace;
 }
 
 h2 {
      font-size: 22px
 	 color: #ffffff;
+	 font-family: monospace;
 }
 
 h3 {
      font-size: 18px
 	 color: #ffffff;
+	 font-family: monospace;
 }
 
 h4 {
      font-size: 16px
 	 color: #ffffff;
+	 font-family: monospace;
 }
 
 h5 {
      font-size: 14px
 	 color: #ffffff;
+	 font-family: monospace;
 }
 
 h6 {
      font-size: 13px
 	 color: #ffffff;
+	 font-family: monospace;
 }
 
 *,
