@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
- 2) font-family: 'Poppins', sans-serif;
+ 2) font-family: 'Poppins', sans-serif , 'Roboto';
  ----------------------------------------*****/
 
 
@@ -276,7 +276,7 @@ button {
 .navigation.navbar-dark .navbar-nav .nav-link {
      padding: 0 25px;
      color: #fff;
-     font-size: 16px;
+     font-size: 22px;
      line-height: 20px;
 }
 
@@ -433,7 +433,7 @@ button {
 .Machines {
      padding: 60px 0;
      background: #0c0f38;
-     font-family: Poppins;
+     font-family: 'Roboto';
 }
 
 .Machines .titlepage {
@@ -521,7 +521,7 @@ button {
 .Articles {
      padding: 60px 0;
      background: #1e2254;
-     font-family: Poppins;
+     font-family: 'Roboto';
 }
 
 .Articles .titlepage {
@@ -609,7 +609,7 @@ button {
 .why {
      margin-top: 90px;
      background: #ffff;
-     font-family: Poppins;
+     font-family: 'Roboto';
 }
 
 .why .titlepage {
@@ -681,7 +681,7 @@ button {
 
 .contact {
      padding-top: 90px;
-     font-family: Poppins;
+     font-family: 'Roboto';
 }
 
 .main_form {
@@ -749,7 +749,7 @@ button {
 /** footer **/
 
 .footer {
-     font-family: Poppins;
+     font-family: 'Roboto';
      background: #06042e;
 }
 
