@@ -65,6 +65,7 @@ h6 {
      font-weight: normal;
      line-height: normal;
      color: #ffffff;
+	 font-family: monospace;
      margin: 0
 }
 
@@ -381,6 +382,7 @@ button {
      line-height: 40px;
      font-weight: bold;
      padding: 0;
+	 font-family: monospace;
 }
 
 
@@ -404,6 +406,7 @@ button {
      font-size: 17px;
      line-height: 28px;
      padding: 40px 50px;
+	 font-family: monospace;
 }
 
 .web_hosting a {
