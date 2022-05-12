@@ -266,7 +266,7 @@ button {
 }
 
 .loader img {
-     width: 5cm;
+      width: 5cm;
 }
 
 
@@ -419,6 +419,7 @@ button {
      max-width: 190px;
      text-align: center;
      display: inline-block;
+     text-transform: uppercase;
      font-weight: 400;
      margin-top: 10px;
 }
