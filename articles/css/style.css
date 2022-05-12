@@ -432,28 +432,28 @@ button {
 /** end Hosting section **/
 
 
-/** Articlesp section **/
+/** Articles section **/
 
-.Articlesp {
+.Articles {
      padding: 60px 0;
      background: #0c0f38;
      font-family: Poppins;
 }
 
-.Articlesp .titlepage {
+.Articles .titlepage {
      text-align: center;
 }
 
-.Articlesp .titlepage h2 {
+.Articles .titlepage h2 {
      color: #fff;
      padding-bottom: 20px;
 }
 
-.Articlesp .titlepage p {
+.Articles .titlepage p {
      color: #fff;
 }
 
-.Articlesp .Articlesp-box i {
+.Articles .Articles-box i {
      background: #0000;
      width: 100px;
      height: 100px;
@@ -462,11 +462,11 @@ button {
      padding-top: 19px;
 }
 
-.Articlesp .Articlesp-box i:hover {
+.Articles .Articles-box i:hover {
      background: #ddd;
 }
 
-.Articlesp .Articlesp-box h3 {
+.Articles .Articles-box h3 {
      padding: 20px 0px 20px 0px;
      font-size: 20px;
      line-height: 25px;
@@ -475,7 +475,7 @@ button {
      font-weight: 500;
 }
 
-.Articlesp .Articlesp-box {
+.Articles .Articles-box {
      text-align: center;
      background-color: black;
      border-radius: 20px;
@@ -485,13 +485,13 @@ button {
      margin-bottom: 30px;
 }
 
-.Articlesp .Articlesp-box:hover {
+.Articles .Articles-box:hover {
      background: #8308eb;
      transition: ease-in all 0.5s;
      cursor: pointer;
 }
 
-.Articlesp .Articlesp-box p {
+.Articles .Articles-box p {
      font-size: 16px;
      line-height: 24px;
      color: #fff;
@@ -517,32 +517,32 @@ button {
 }
 
 
-/** end Articlesp section **/
+/** end Articles section **/
 
 
-/** Articlesp section **/
+/** Articles section **/
 
-.Articlespp {
+.Articles {
      padding: 60px 0;
      background: #0c0f38;
      font-family: Poppins;
 }
 
-.Articlespp .titlepage {
+.Articles .titlepage {
      text-align: center;
 	 
 }
 
-.Articlespp .titlepage h2 {
+.Articles .titlepage h2 {
      color: #fff;
      padding-bottom: 20px;
 }
 
-.Articlespp .titlepage p {
+.Articles .titlepage p {
      color: #fff;
 }
 
-.Articlespp .Articlesp-box i {
+.Articles .Articles-box i {
      background: #0000;
      width: 100px;
      height: 100px;
@@ -551,11 +551,11 @@ button {
      padding-top: 19px;
 }
 
-.Articlespp .Articlesp-box i:hover {
+.Articles .Articles-box i:hover {
      background: #ddd;
 }
 
-.Articlespp .Articlesp-box h3 {
+.Articles .Articles-box h3 {
      padding: 20px 0px 20px 0px;
      font-size: 20px;
      line-height: 25px;
@@ -564,7 +564,7 @@ button {
      font-weight: 500;
 }
 
-.Articlespp .Articlesp-box {
+.Articles .Articles-box {
      text-align: center;
      background-color: black;
      border-radius: 20px;
@@ -574,13 +574,13 @@ button {
      margin-bottom: 30px;
 }
 
-.Articlespp .Articlesp-box:hover {
+.Articles .Articles-box:hover {
      background: #8308eb;
      transition: ease-in all 0.5s;
      cursor: pointer;
 }
 
-.Articlesp .Articlesp-box p {
+.Articles .Articles-box p {
      font-size: 16px;
      line-height: 24px;
      color: #fff;
@@ -606,7 +606,7 @@ button {
 }
 
 
-/** end Articlesp section **/
+/** end Articles section **/
 
 
 /** why section **/

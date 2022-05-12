@@ -528,7 +528,7 @@ button {
 
 .Articles {
      padding: 60px 0;
-     background: #1e2254;
+     background: #000000;
      font-family: 'Roboto';
 }
 
@@ -555,7 +555,7 @@ button {
 }
 
 .Articles .Articles-box i:hover {
-     background: #ddd;
+     background: #0c0f38;
 }
 
 .Articles .Articles-box h3 {
