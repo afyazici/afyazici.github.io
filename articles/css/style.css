@@ -432,28 +432,28 @@ button {
 /** end Hosting section **/
 
 
-/** Articles section **/
+/** Articlesp section **/
 
-.Articles {
+.Articlesp {
      padding: 60px 0;
      background: #0c0f38;
      font-family: Poppins;
 }
 
-.Articles .titlepage {
+.Articlesp .titlepage {
      text-align: center;
 }
 
-.Articles .titlepage h2 {
+.Articlesp .titlepage h2 {
      color: #fff;
      padding-bottom: 20px;
 }
 
-.Articles .titlepage p {
+.Articlesp .titlepage p {
      color: #fff;
 }
 
-.Articles .Articles-box i {
+.Articlesp .Articlesp-box i {
      background: #0000;
      width: 100px;
      height: 100px;
@@ -462,11 +462,11 @@ button {
      padding-top: 19px;
 }
 
-.Articles .Articles-box i:hover {
+.Articlesp .Articlesp-box i:hover {
      background: #ddd;
 }
 
-.Articles .Articles-box h3 {
+.Articlesp .Articlesp-box h3 {
      padding: 20px 0px 20px 0px;
      font-size: 20px;
      line-height: 25px;
@@ -475,7 +475,7 @@ button {
      font-weight: 500;
 }
 
-.Articles .Articles-box {
+.Articlesp .Articlesp-box {
      text-align: center;
      background-color: black;
      border-radius: 20px;
@@ -485,13 +485,13 @@ button {
      margin-bottom: 30px;
 }
 
-.Articles .Articles-box:hover {
+.Articlesp .Articlesp-box:hover {
      background: #8308eb;
      transition: ease-in all 0.5s;
      cursor: pointer;
 }
 
-.Articles .Articles-box p {
+.Articlesp .Articlesp-box p {
      font-size: 16px;
      line-height: 24px;
      color: #fff;
@@ -517,32 +517,32 @@ button {
 }
 
 
-/** end Articles section **/
+/** end Articlesp section **/
 
 
-/** Articles section **/
+/** Articlesp section **/
 
-.Articles {
+.Articlespp {
      padding: 60px 0;
      background: #0c0f38;
      font-family: Poppins;
 }
 
-.Articles .titlepage {
+.Articlespp .titlepage {
      text-align: center;
 	 
 }
 
-.Articles .titlepage h2 {
+.Articlespp .titlepage h2 {
      color: #fff;
      padding-bottom: 20px;
 }
 
-.Articles .titlepage p {
+.Articlespp .titlepage p {
      color: #fff;
 }
 
-.Articles .Articles-box i {
+.Articlespp .Articlesp-box i {
      background: #0000;
      width: 100px;
      height: 100px;
@@ -551,11 +551,11 @@ button {
      padding-top: 19px;
 }
 
-.Articles .Articles-box i:hover {
+.Articlespp .Articlesp-box i:hover {
      background: #ddd;
 }
 
-.Articles .Articles-box h3 {
+.Articlespp .Articlesp-box h3 {
      padding: 20px 0px 20px 0px;
      font-size: 20px;
      line-height: 25px;
@@ -564,7 +564,7 @@ button {
      font-weight: 500;
 }
 
-.Articles .Articles-box {
+.Articlespp .Articlesp-box {
      text-align: center;
      background-color: black;
      border-radius: 20px;
@@ -574,13 +574,13 @@ button {
      margin-bottom: 30px;
 }
 
-.Articles .Articles-box:hover {
+.Articlespp .Articlesp-box:hover {
      background: #8308eb;
      transition: ease-in all 0.5s;
      cursor: pointer;
 }
 
-.Articles .Articles-box p {
+.Articlesp .Articlesp-box p {
      font-size: 16px;
      line-height: 24px;
      color: #fff;
@@ -606,7 +606,7 @@ button {
 }
 
 
-/** end Articles section **/
+/** end Articlesp section **/
 
 
 /** why section **/
