@@ -266,7 +266,7 @@ button {
 }
 
 .loader img {
-      width: 5cm;
+     width: 5cm;
 }
 
 
@@ -419,7 +419,6 @@ button {
      max-width: 190px;
      text-align: center;
      display: inline-block;
-     text-transform: uppercase;
      font-weight: 400;
      margin-top: 10px;
 }
@@ -433,28 +432,28 @@ button {
 /** end Hosting section **/
 
 
-/** Machines section **/
+/** Articles section **/
 
-.Machines {
+.Articles {
      padding: 60px 0;
      background: #0c0f38;
      font-family: Poppins;
 }
 
-.Machines .titlepage {
+.Articles .titlepage {
      text-align: center;
 }
 
-.Machines .titlepage h2 {
+.Articles .titlepage h2 {
      color: #fff;
      padding-bottom: 20px;
 }
 
-.Machines .titlepage p {
+.Articles .titlepage p {
      color: #fff;
 }
 
-.Machines .Machines-box i {
+.Articles .Articles-box i {
      background: #0000;
      width: 100px;
      height: 100px;
@@ -463,11 +462,11 @@ button {
      padding-top: 19px;
 }
 
-.Machines .Machines-box i:hover {
+.Articles .Articles-box i:hover {
      background: #ddd;
 }
 
-.Machines .Machines-box h3 {
+.Articles .Articles-box h3 {
      padding: 20px 0px 20px 0px;
      font-size: 20px;
      line-height: 25px;
@@ -476,7 +475,7 @@ button {
      font-weight: 500;
 }
 
-.Machines .Machines-box {
+.Articles .Articles-box {
      text-align: center;
      background-color: black;
      border-radius: 20px;
@@ -486,13 +485,13 @@ button {
      margin-bottom: 30px;
 }
 
-.Machines .Machines-box:hover {
+.Articles .Articles-box:hover {
      background: #8308eb;
      transition: ease-in all 0.5s;
      cursor: pointer;
 }
 
-.Machines .Machines-box p {
+.Articles .Articles-box p {
      font-size: 16px;
      line-height: 24px;
      color: #fff;
@@ -518,19 +517,20 @@ button {
 }
 
 
-/** end Machines section **/
+/** end Articles section **/
 
 
 /** Articles section **/
 
 .Articles {
      padding: 60px 0;
-     background: #1e2254;
+     background: #17193a;
      font-family: Poppins;
 }
 
 .Articles .titlepage {
      text-align: center;
+	 
 }
 
 .Articles .titlepage h2 {
