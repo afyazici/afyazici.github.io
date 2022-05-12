@@ -82,7 +82,7 @@ hr {
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
-  color: red;
+  color: #99b500;
   background-color: #232a37;
 }
 
