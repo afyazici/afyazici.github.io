@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Nmap</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/nmaprimages/machines22.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/articles"> Articles</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="/machines/images/nmaprimages/machines22.png" style="height:300px;"></figure>
+					 <h2>Introductory Networking</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+					 <h1>Task 1 Deploy</h1>
+					 <p><strong>No answer needed</strong></p>&nbsp;
+					 
+					 
+					 <h1>Task 2 Introduction</h1>
+					 <h5>What networking constructs are used to firect traffic to the right application on a server?</h5>
+					 <p>Ports</p>&nbsp;
+					 <h5>How many of these are available on any network-enabled computer?</h5>
+					 <p>65535</p>&nbsp;
+					 <h5>[Research] How many of these are considered "well-known"? (These are the "standard" numbers mentioned in the task)</h5>
+					 <p>We are expected to do research on this question.</p>&nbsp;
+					 <figure><img  src="/machines/images/nmaprimages/1.PNG"/></figure>
+					 <p>1024</p>&nbsp;
+					 
+					 
+					 <h1>Task 3 Nmap Switches</h1>
+					 <p>In the following questions we are asked some nmap commands.</p>&nbsp;
+					 <h5>What is the first switch listed in the help menu for a 'Syn Scan' (more on this later!)?</h5>
+					 <p>-sS</p>&nbsp;
+					 <h5>Which switch would you use for a "UDP scan"?</h5>
+					 <p>-sU</p>&nbsp;
+					 <h5>If you wanted to detect which operating system the target is running on, which switch would you use?</h5>
+					 <p>-O</p>&nbsp;
+					 <h5>Nmap provides a switch to detect the version of the services running on the target. What is this switch?</h5>
+					 <p>-sV</p>&nbsp;
+					 <h5>The default output provided by nmap often does not provide enough information for a pentester. How would you increase the verbosity?</h5>
+					 <p>-v</p>&nbsp;
+					 <h5>Verbosity level one is good, but verbosity level two is better! How would you set the verbosity level to two?</h5>
+					 <p>-vv</p>&nbsp;
+					 <h5>We should always save the output of our scans -- this means that we only need to run the scan once (reducing network traffic and thus chance of detection), and gives us a reference to use when writing reports for clients. What switch would you use to save the nmap results in three major formats?</h5>
+					 <p>-oA</p>&nbsp;
+					 <h5>What switch would you use to save the nmap results in a "normal" format?</h5>
+					 <p>-oN</p>&nbsp;
+					 <h5>A very useful output format: how would you save results in a "grepable" format?</h5>
+					 <p>-oG</p>&nbsp;
+					 <h5>Sometimes the results we're getting just aren't enough. If we don't care about how loud we are, we can enable "aggressive" mode. This is a shorthand switch that activates service detection, operating system detection, a traceroute and common script scanning. How would you activate this setting?</h5>
+					 <p>-A</p>&nbsp;
+					 <h5>Nmap offers five levels of "timing" template. These are essentially used to increase the speed your scan runs at. Be careful though: higher speeds are noisier, and can incur errors! How would you set the timing template to level 5?</h5>
+					 <p>-T5</p>&nbsp;
+					 <h5>We can also choose which port(s) to scan. How would you tell nmap to only scan port 80?</h5>
+					 <p>-p 80</p>&nbsp;
+					 <h5>How would you tell nmap to scan ports 1000-1500?</h5>
+					 <p>-p 1000-1500</p>&nbsp;
+					 <h5>A very useful option that should not be ignored: How would you tell nmap to scan all ports?</h5>
+					 <p>-p-</p>&nbsp;
+					 <h5>How would you activate a script from the nmap scripting library (lots more on this later!)?</h5>
+					 <p>--script</p>&nbsp;
+					 <h5>How would you activate all of the scripts in the "vuln" category?</h5>
+					 <p>--script=vuln</p>&nbsp;
+					 
+					 
+					 <h1>Task 4 Scan Types Overview</h1>
+					 <p><strong>No answer needed</strong></p>
+					 
+					 
+					 <h1>Task 5 Scan Types TCP Connect Scans</h1>
+					 <h5>Which RFC defines the appropriate behaviour for the TCP protocol?</h5>
+					 <p>RFC 793</p>&nbsp;
+					 <h5>If a port is closed, which flag should the server send back to indicate this?</h5>
+					 <p>RST</p>&nbsp;
+					 
+					 
+					 <h1>Task 6 Scan Types SYN Scans</h1>
+					 <h5>There are two other names for a SYN scan, what are they?</h5>
+					 <p>Half-Open, Stealth</p>
+					 <h5>Can Nmap use a SYN scan without Sudo permissions (Y/N)?</h5>
+					 <p>N</p>
+					 
+					 
+					 <h1>Task 7 Scan Types UDP Scans</h1>
+					 <h5>If a UDP port doesn't respond to an Nmap scan, what will it be marked as?</h5>
+					 <p>open|filtered</p>
+					 <h5>When a UDP port is closed, by convention the target should send back a "port unreachable" message. Which protocol would it use to do so?</h5>
+					 <p>ICMP</p>
+					 
+					 
+					 <h1>Task 8 Scan Types NULL, FIN and Xmas</h1>
+					 <h5>Which of the three shown scan types uses the URG flag?</h5>
+					 <p>xmas</p>
+					 <h5>Why are NULL, FIN and Xmas scans generally used?</h5>
+					 <p>Firewall Evasion</p>
+					 <h5>Which common OS may respond to a NULL, FIN or Xmas scan with a RST for every port?</h5>
+					 <p>Microsoft Windows</p>
+					 
+
+					 <h1>Task 9 Scan Types ICMP Network Scanning</h1>
+					 <h5>How would you perform a ping sweep on the 172.16.x.x network (Netmask: 255.255.0.0) using Nmap? (CIDR notation)</h5>
+					 <p>nmap -sn 172.16.0.0/16</p>
+					 
+					 
+					 <h1>Task 10 NSE Scripts Overview</h1>
+					 <h5>What language are NSE scripts written in?</h5>
+					 <p>Lua</p>
+					 <h5>Which category of scripts would be a very bad idea to run in a production environment?</h5>
+					 <p>intrusive</p>
+					 
+					 
+					 <h1>Task 11 NSE Scripts Working with the NSE</h1>
+					 <h5>What optional argument can the ftp-anon.nse script take?</h5>
+					 <p>maxlist</p>
+					 
+					 
+					 <h1>Task 12 NSE Scripts Searching for Scripts</h1>
+					 <h5>Search for "smb" scripts in the /usr/share/nmap/scripts/ directory using either of the demonstrated methods. What is the filename of the script which determines the underlying OS of the SMB server?</h5>
+					 <p>smb-os-discovery.nse</p>
+					 <h5>Read through this script. What does it depend on?</h5>
+					 <p>smb-brute</p>
+					 
+					 
+					 <h1>Task 13 Firewall Evasion</h1>
+					 <h5>Which simple (and frequently relied upon) protocol is often blocked, requiring the use of the -Pn switch?</h5>
+					 <p>ICMP</p>
+					 <h5>[Research] Which Nmap switch allows you to append an arbitrary length of random data to the end of packets?</h5>
+					 <p>--data-length</p>
+					 
+					 
+					 <h1>Task 14 Practical</h1>
+					 <h5>Does the target (10.10.249.46)respond to ICMP (ping) requests (Y/N)?</h5>
+					 <figure><img  src="/machines/images/nmaprimages/2.PNG"/></figure>
+					 <p>n</p>
+					 
+					 <h5>Perform an Xmas scan on the first 999 ports of the target -- how many ports are shown to be open or filtered?</h5>
+					 <figure><img  src="/machines/images/nmaprimages/3.PNG"/></figure>
+					 <p>999</p>
+					 
+					 <h5>There is a reason given for this -- what is it? Note: The answer will be in your scan results. Think carefully about which switches to use -- and read the hint before asking for help!</h5>
+					 <figure><img  src="/machines/images/nmaprimages/4.PNG"/></figure>
+					 <p>No response</p>
+					 
+					 <h5>Perform a TCP SYN scan on the first 5000 ports of the target -- how many ports are shown to be open?</h5>
+					 <figure><img  src="/machines/images/nmaprimages/5.PNG"/></figure>
+					 <p>5</p>
+					 
+					 <h5>Open Wireshark (see Cryillic's Wireshark Room for instructions) and perform a TCP Connect scan against port 80 on the target, monitoring the results. Make sure you understand what's going on.</h5>
+					 <p><strong>No answer needed</strong></p>
+					 
+					 <h5>Deploy the ftp-anon script against the box. Can Nmap login successfully to the FTP server on port 21? (Y/N)</h5>
+					 <figure><img  src="/machines/images/nmaprimages/6.PNG"/></figure>
+					 <p>y</p>
+					 
+					 
+					 <h1>Task 15 Conclusion</h1>
+					 <p><strong>No answer needed</strong></p>
+					 
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
