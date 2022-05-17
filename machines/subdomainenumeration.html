@@ -90,7 +90,6 @@
                <div class="col-md-12">
                   <div class="web_hosting">
 					 <h1>Task 1 Brief</h1>
-					 <p>The answers to the questions are in the text above.</p>
 					 <h5>What is a subdomain enumeration method beginning with B?</h5>
 					 <p>"Brute Force"</p>&nbsp;
 					 <h5>What is a subdomain enumeration method beginning with O?</h5>
@@ -98,25 +97,25 @@
 					 <h5>What is a subdomain enumeration method beginning with V?</h5>
 					 <p>"Virtual Host"</p>&nbsp;
 					 <h1>Task 2 OSINT – SSL/TLS Certificates</h1>
-					 <p>Go to crt.sh and search for the domain name tryhackme.com, find the entry that was logged at 2020-12-26 and enter the domain below to answer the question.</p>
+					 <h6>Go to crt.sh and search for the domain name tryhackme.com, find the entry that was logged at 2020-12-26 and enter the domain below to answer the question.</h6>
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task2.PNG"/></figure>&nbsp;
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task3.PNG"/></figure>
 					 <h1>Task 3 OSINT – Search Engines</h1>
-					 <p>Go to Google and use the search term -site:www.tryhackme.com  site:*.tryhackme.com, which should reveal a subdomain for tryhackme.com; use that subdomain to answer the question below.</p>
+					 <h6>Go to Google and use the search term -site:www.tryhackme.com  site:*.tryhackme.com, which should reveal a subdomain for tryhackme.com; use that subdomain to answer the question below.</h6>
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task4.PNG"/></figure>&nbsp;
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task5.PNG"/></figure>
 					 <h1>Task 4 DNS Bruteforce</h1>
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task6.PNG"/></figure>&nbsp;
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task7.PNG"/></figure>
 					 <h1>Task 5 OSINT – Sublist3r</h1>
-					 <p>What we need to do at this stage is to reach the answer using Sublist3r.</p>
+					 <h6>What we need to do at this stage is to reach the answer using Sublist3r.</h6>
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task8.PNG"/></figure>&nbsp;
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task9.PNG"/></figure>
 					 <h1>Task 6 Virtual Hosts</h1>
-					 <p>When we run the first command given to us and look at the subdomains, we notice something. Most of the results have a Size of 2395.</p>
+					 <h6>When we run the first command given to us and look at the subdomains, we notice something. Most of the results have a Size of 2395.</h6>
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task10.PNG"/></figure>
-					 <p>For this we need to filter these results.</p>
-					 <p>Here is the code we need to use:</p>
+					 <h6>For this we need to filter these results.</h6>
+					 <h6>Here is the code we need to use:</h6>
 					 <p><strong>ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.10.69.24 -fs {size}</strong></p>
 					 <figure><img  src="/machines/images/subdomainenumerationimages/task11.PNG"/></figure>&nbsp;
                   </div>
