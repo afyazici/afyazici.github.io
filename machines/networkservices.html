@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Network Services</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/networkservicesimages/machines23.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/articles"> Articles</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="/machines/images/networkservicesimages/machines23.png" style="height:300px;"></figure>
+					 <h2>Introductory Networking</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+					 <h1>Task 1 Get Connected</h1>
+					 <p><strong>No answer needed</strong></p>&nbsp;
+				
+					 <h1>Task 2 Understanding SMB</h1>
+					 <h5>What does SMB stand for?<h5>
+					 <p>Server Message Block</p>&nbsp;
+					 <h5>What type of protocol is SMB?<h5>
+					 <p>response-request </p>&nbsp;
+					 <h5>What do clients connect to servers using?<h5>
+					 <p>TCP/IP</p>&nbsp;
+					 <h5>What systems does Samba run on?</h5>
+					 <p>Unix</p>&nbsp;
+					 
+					 <h1>Task 3 Enumerating SMB</h1>
+					 <h5>Conduct an nmap scan of your choosing, How many ports are open?</h5>
+					 <h5>What ports is SMB running on?</h5>
+					 <h6>For the first two questions, we look at the output below.</h6>
+					 <figure><img  src="/machines/images/networkservicesimages/1.png"/></figure>
+					 <figure><img  src="/machines/images/networkservicesimages/2.png"/></figure>&nbsp;
+					 <p>"3"</p>&nbsp;
+					 <p>"139/445"</p>&nbsp;
+					 <h5>Let's get started with Enum4Linux, conduct a full basic enumeration. For starters, what is the workgroup name?</h5>
+					 <h6>For the next question, we use the command "enum4linux 10.10.42.92".</h6>
+					 <figure><img  src="/machines/images/networkservicesimages/3.png"/></figure>
+					 <figure><img  src="/machines/images/networkservicesimages/4.png"/></figure>&nbsp;
+					 <p>"workgroup"</p>&nbsp;
+					 <h5>What comes up as the name of the machine?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/5.png"/></figure>&nbsp;
+					 <p>"POLOSMB"</p>&nbsp;
+					 <h5>What operating system version is running?    </h5>
+					 <p>"6.1"</p>&nbsp;
+					 <h5>What share sticks out as something we might want to investigate?</h5>
+					 <p>"Profiles"</p>&nbsp;
+					 
+					 <h1>Task 4 Exploiting SMB</h1>
+					 <h5>What would be the correct syntax to access an SMB share called "secret" as user "suit" on a machine with the IP 10.10.10.2 on the default port?</h5>
+					 <p><code>“smbclient //10.10.10.2/secret -U suit -p”</code></p>&nbsp;
+					 <h5>Great! Now you've got a hang of the syntax, let's have a go at trying to exploit this vulnerability. You have a list of users, the name of the share (smb) and a suspected vulnerability.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 <h5>Does the share allow anonymous access? Y/N?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/6.png"/></figure>
+					 <p>"Y"</p>&nbsp;
+					 <h6>The only file we have permission is "Working From".</h6>
+					 <h6>Let's throw this file on our own machine to read it.</h6>
+					 <figure><img  src="/machines/images/networkservicesimages/7.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/8.png"/></figure>&nbsp;
+					 <h5>Great! Have a look around for any interesting documents that could contain valuable information. Who can we assume this profile folder belongs to?</h5>
+					 <p>“John Cactus”</p>&nbsp;
+					 <h5>What service has been configured to allow him to work from home?</h5>
+					 <p>“ssh”</p>&nbsp;
+					 <h5>Okay! Now we know this, what directory on the share should we look in?</h5>
+					 <p>“.ssh”</p>&nbsp;
+					 <h5>This directory contains authentication keys that allow a user to authenticate themselves on, and then access, a server. Which of these keys is most useful to us?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/9.png"/></figure>&nbsp;
+					 <p>“id_rsa”</p>&nbsp;
+					 <h5>What is the smb.txt flag?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/10.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/11.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/12.png"/></figure>&nbsp;
+					 <p>“THM{smb_is_fun_eh?}”</p>&nbsp;
+					 
+					 <h1>Task 5 Understanding Telnet</h1>
+					 
+					 <h5>What is Telnet?</h5>
+					 <p>“application protocol”</p>&nbsp;
+					 <h5>What has slowly replaced Telnet?</h5>
+					 <p>“ssh”</p>&nbsp;
+					 <h5>How would you connect to a Telnet server with the IP 10.10.10.3 on port 23?</h5>
+					 <p>“telnet ip 10.10.10.3 -p 23”</p>&nbsp;
+					 <h5>The lack of what, means that all Telnet communication is in plaintext?</h5>
+					 <p>“Encryption”</p>&nbsp;
+					 
+					 <h1>Task 6 Enumerating Telnet</h1>
+					 <h5>How many ports are open on the target machine?    </h5>
+					 <figure><img  src="/machines/images/networkservicesimages/13.png"/></figure>&nbsp;
+					 <p>“1” </p>&nbsp;
+					 <h5>What port is this?</h5>
+					 <p>“8012”</p>&nbsp;
+					 <h5>This port is unassigned, but still lists the protocol it's using, what protocol is this?     </h5>
+					 <p>“tcp”</p>&nbsp;
+					 <h5>Now re-run the nmap scan, without the -p- tag, how many ports show up as open?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/14.png"/></figure>&nbsp;
+					 <p>“0”</p>&nbsp;
+					 <p>No answer needed</p>&nbsp;
+					 <h5>Based on the title returned to us, what do we think this port could be used for?</h5>
+					 <h6>For this and the following questions, we can look at the old scan results.</h6>
+					 <figure><img  src="/machines/images/networkservicesimages/15.png"/></figure>&nbsp;
+					 <p>“a backdoor”</p>&nbsp;
+					 <h5>Who could it belong to? Gathering possible usernames is an important step in enumeration.</h5>
+					 <p>“skidy”</p>&nbsp;
+					 <h5>Always keep a note of information you find during your enumeration stage, so you can refer back to it when you move on to try exploits.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 7 Exploiting Telnet</h1>
+					 <h5>Okay, let's try and connect to this telnet port! If you get stuck, have a look at the syntax for connecting outlined above.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 <h5>Great! It's an open telnet connection! What welcome message do we receive?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/16.png"/></figure>	&nbsp;				 
+					 <p>“SKIDY’S BACKDOOR”</p>&nbsp;
+					 <h5>Let's try executing some commands, do we get a return on any input we enter into the telnet session? (Y/N)</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/17.png"/></figure>&nbsp;
+					 <p>"n"</p>&nbsp;
+					 <h5>Hmm... that's strange. Let's check to see if what we're typing is being executed as a system command.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 <h5>This starts a tcpdump listener, specifically listening for ICMP traffic, which pings operate on.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 <h5>Now, use the command "ping [local THM ip] -c 1" through the telnet session to see if we're able to execute system commands. Do we receive any pings? Note, you need to preface this with .RUN (Y/N)</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/18.png"/></figure>&nbsp;
+					 <p>"y"</p>&nbsp;
+					 <h5>Great! This means that we are able to execute system commands AND that we are able to reach our local machine. Now let's have some fun!</h5>
+					 <p>No answer needed</p>&nbsp;
+					 <h5>We're going to generate a reverse shell payload using msfvenom.This will generate and encode a netcat reverse shell for us. What word does the generated payload start with?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/19.png"/></figure>&nbsp;
+					 <p>“mkfifo”</p>&nbsp;
+					 <h5>What would the command look like for the listening port we selected in our payload?</h5>
+					 <p>“nc -lvp 4444”</p>&nbsp;
+					 <h5>Great! Now that's running, we need to copy and paste our msfvenom payload into the telnet session and run it as a command. Hopefully- this will give us a shell on the target machine!</h5>
+					 <p>No answer needed</p>&nbsp;
+					 <h5>Success! What is the contents of flag.txt?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/20.png"/></figure>&nbsp;				 
+					 <p>“THM{y0u_g0t_th3_t3ln3t_fl4g}”</p>&nbsp;
+					 
+					 <h1>Task 8 Understanding FTP</h1>
+					 <h5>What communications model does FTP use?</h5>
+					 <p>“client-server”</p>&nbsp;
+					 <h5>What's the standard FTP port?</h5>
+					 <p>“21”</p>&nbsp;
+					 <h5>How many modes of FTP connection are there?</h5>
+					 <p>“2”</p>&nbsp;
+					 
+					 <h1>Task 9 Enumerating FTP</h1>
+					 <h6>Run an nmap scan of your choice.</h6>
+					 <figure><img  src="/machines/images/networkservicesimages/21.png"/></figure>&nbsp;
+					 <h5>How many ports are open on the target machine?</h5>
+					 <p>“2”</p>&nbsp;
+					 <h5>What port is ftp running on?</h5>
+					 <p>“21”</p>&nbsp;
+					 <h5>What variant of FTP is running on it?</h5>
+					 <p>“vsftpd”</p>&nbsp;
+					 <h5>What is the name of the file in the anonymous FTP directory?</h5>
+					 <p>“PUBLIC_NOTICE.txt”</p>&nbsp;
+					 <h5>What do we think a possible username could be?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/22.png"/></figure>&nbsp;
+					 <p>“mike”</p>&nbsp;
+					 <h5>Great! Now we've got details about the FTP server and, crucially, a possible username. Let's see what we can do with that...</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 10 Exploiting FTP</h1>
+					 <h5>What is the password for the user "mike"?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/23.png"/></figure>&nbsp;
+					 <p>"password"</p>&nbsp;
+					 <h5>What is ftp.txt?</h5>
+					 <figure><img  src="/machines/images/networkservicesimages/24.png"/></figure>&nbsp;
+					 <p>“THM{y0u_g0t_th3_ftp_fl4g}”</p>&nbsp;
+					 
+					 <h1>Task 11 Expanding Your Knowledge</h1>
+					 <h5>Well done, you did it!</h5>
+					 <p>No answer needed</p>&nbsp;
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
