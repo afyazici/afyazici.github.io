@@ -106,17 +106,17 @@
 					 <h5>Conduct an nmap scan of your choosing, How many ports are open?</h5>
 					 <h5>What ports is SMB running on?</h5>
 					 <h6>For the first two questions, we look at the output below.</h6>
-					 <figure><img  src="/machines/images/networkservicesimages/1.png"/></figure>
-					 <figure><img  src="/machines/images/networkservicesimages/2.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/1.PNG"/></figure>
+					 <figure><img  src="/machines/images/networkservicesimages/2.PNG"/></figure>&nbsp;
 					 <p>"3"</p>&nbsp;
 					 <p>"139/445"</p>&nbsp;
 					 <h5>Let's get started with Enum4Linux, conduct a full basic enumeration. For starters, what is the workgroup name?</h5>
 					 <h6>For the next question, we use the command "enum4linux 10.10.42.92".</h6>
-					 <figure><img  src="/machines/images/networkservicesimages/3.png"/></figure>
-					 <figure><img  src="/machines/images/networkservicesimages/4.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/3.PNG"/></figure>
+					 <figure><img  src="/machines/images/networkservicesimages/4.PNG"/></figure>&nbsp;
 					 <p>"workgroup"</p>&nbsp;
 					 <h5>What comes up as the name of the machine?</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/5.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/5.PNG"/></figure>&nbsp;
 					 <p>"POLOSMB"</p>&nbsp;
 					 <h5>What operating system version is running?    </h5>
 					 <p>"6.1"</p>&nbsp;
@@ -129,12 +129,12 @@
 					 <h5>Great! Now you've got a hang of the syntax, let's have a go at trying to exploit this vulnerability. You have a list of users, the name of the share (smb) and a suspected vulnerability.</h5>
 					 <p>No answer needed</p>&nbsp;
 					 <h5>Does the share allow anonymous access? Y/N?</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/6.png"/></figure>
+					 <figure><img  src="/machines/images/networkservicesimages/6.PNG"/></figure>
 					 <p>"Y"</p>&nbsp;
 					 <h6>The only file we have permission is "Working From".</h6>
 					 <h6>Let's throw this file on our own machine to read it.</h6>
-					 <figure><img  src="/machines/images/networkservicesimages/7.png"/></figure>&nbsp;
-					 <figure><img  src="/machines/images/networkservicesimages/8.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/7.PNG"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/8.PNG"/></figure>&nbsp;
 					 <h5>Great! Have a look around for any interesting documents that could contain valuable information. Who can we assume this profile folder belongs to?</h5>
 					 <p>“John Cactus”</p>&nbsp;
 					 <h5>What service has been configured to allow him to work from home?</h5>
@@ -147,7 +147,7 @@
 					 <h5>What is the smb.txt flag?</h5>
 					 <figure><img  src="/machines/images/networkservicesimages/10.png"/></figure>&nbsp;
 					 <figure><img  src="/machines/images/networkservicesimages/11.png"/></figure>&nbsp;
-					 <figure><img  src="/machines/images/networkservicesimages/12.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/12.PNG"/></figure>&nbsp;
 					 <p>“THM{smb_is_fun_eh?}”</p>&nbsp;
 					 
 					 <h1>Task 5 Understanding Telnet</h1>
@@ -163,19 +163,19 @@
 					 
 					 <h1>Task 6 Enumerating Telnet</h1>
 					 <h5>How many ports are open on the target machine?    </h5>
-					 <figure><img  src="/machines/images/networkservicesimages/13.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/13.PNG"/></figure>&nbsp;
 					 <p>“1” </p>&nbsp;
 					 <h5>What port is this?</h5>
 					 <p>“8012”</p>&nbsp;
 					 <h5>This port is unassigned, but still lists the protocol it's using, what protocol is this?     </h5>
 					 <p>“tcp”</p>&nbsp;
 					 <h5>Now re-run the nmap scan, without the -p- tag, how many ports show up as open?</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/14.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/14.PNG"/></figure>&nbsp;
 					 <p>“0”</p>&nbsp;
 					 <p>No answer needed</p>&nbsp;
 					 <h5>Based on the title returned to us, what do we think this port could be used for?</h5>
 					 <h6>For this and the following questions, we can look at the old scan results.</h6>
-					 <figure><img  src="/machines/images/networkservicesimages/15.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/15.PNG"/></figure>&nbsp;
 					 <p>“a backdoor”</p>&nbsp;
 					 <h5>Who could it belong to? Gathering possible usernames is an important step in enumeration.</h5>
 					 <p>“skidy”</p>&nbsp;
@@ -186,22 +186,22 @@
 					 <h5>Okay, let's try and connect to this telnet port! If you get stuck, have a look at the syntax for connecting outlined above.</h5>
 					 <p>No answer needed</p>&nbsp;
 					 <h5>Great! It's an open telnet connection! What welcome message do we receive?</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/16.png"/></figure>	&nbsp;				 
+					 <figure><img  src="/machines/images/networkservicesimages/16.PNG"/></figure>	&nbsp;				 
 					 <p>“SKIDY’S BACKDOOR”</p>&nbsp;
 					 <h5>Let's try executing some commands, do we get a return on any input we enter into the telnet session? (Y/N)</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/17.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/17.PNG"/></figure>&nbsp;
 					 <p>"n"</p>&nbsp;
 					 <h5>Hmm... that's strange. Let's check to see if what we're typing is being executed as a system command.</h5>
 					 <p>No answer needed</p>&nbsp;
 					 <h5>This starts a tcpdump listener, specifically listening for ICMP traffic, which pings operate on.</h5>
 					 <p>No answer needed</p>&nbsp;
 					 <h5>Now, use the command "ping [local THM ip] -c 1" through the telnet session to see if we're able to execute system commands. Do we receive any pings? Note, you need to preface this with .RUN (Y/N)</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/18.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/18.PNG"/></figure>&nbsp;
 					 <p>"y"</p>&nbsp;
 					 <h5>Great! This means that we are able to execute system commands AND that we are able to reach our local machine. Now let's have some fun!</h5>
 					 <p>No answer needed</p>&nbsp;
 					 <h5>We're going to generate a reverse shell payload using msfvenom.This will generate and encode a netcat reverse shell for us. What word does the generated payload start with?</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/19.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/19.PNG"/></figure>&nbsp;
 					 <p>“mkfifo”</p>&nbsp;
 					 <h5>What would the command look like for the listening port we selected in our payload?</h5>
 					 <p>“nc -lvp 4444”</p>&nbsp;
@@ -221,7 +221,7 @@
 					 
 					 <h1>Task 9 Enumerating FTP</h1>
 					 <h6>Run an nmap scan of your choice.</h6>
-					 <figure><img  src="/machines/images/networkservicesimages/21.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/21.PNG"/></figure>&nbsp;
 					 <h5>How many ports are open on the target machine?</h5>
 					 <p>“2”</p>&nbsp;
 					 <h5>What port is ftp running on?</h5>
@@ -231,17 +231,17 @@
 					 <h5>What is the name of the file in the anonymous FTP directory?</h5>
 					 <p>“PUBLIC_NOTICE.txt”</p>&nbsp;
 					 <h5>What do we think a possible username could be?</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/22.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/22.PNG"/></figure>&nbsp;
 					 <p>“mike”</p>&nbsp;
 					 <h5>Great! Now we've got details about the FTP server and, crucially, a possible username. Let's see what we can do with that...</h5>
 					 <p>No answer needed</p>&nbsp;
 					 
 					 <h1>Task 10 Exploiting FTP</h1>
 					 <h5>What is the password for the user "mike"?</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/23.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/23.PNG"/></figure>&nbsp;
 					 <p>"password"</p>&nbsp;
 					 <h5>What is ftp.txt?</h5>
-					 <figure><img  src="/machines/images/networkservicesimages/24.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservicesimages/24.PNG"/></figure>&nbsp;
 					 <p>“THM{y0u_g0t_th3_ftp_fl4g}”</p>&nbsp;
 					 
 					 <h1>Task 11 Expanding Your Knowledge</h1>
