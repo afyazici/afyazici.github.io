@@ -412,8 +412,7 @@ button {
 
 .web_hosting a {
      font-size: 16px;
-     background-color: #000;
-     color: #fff;
+	 color: darkmagenta;
      padding: 10px 0px;
      width: 100%;
      max-width: 190px;
