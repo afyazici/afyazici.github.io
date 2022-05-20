@@ -404,6 +404,7 @@ button {
 
 .web_hosting figure {
      margin: 0;
+	 background-color: #120f1e;
 }
 
 .web_hosting p {
@@ -440,7 +441,7 @@ button {
 
 .Machines {
      padding: 60px 0;
-     background: #0c0f38;
+     background: #1c192b;
      font-family: 'Roboto';
 }
 
