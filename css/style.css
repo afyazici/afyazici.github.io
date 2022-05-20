@@ -487,6 +487,7 @@ button {
      padding: 40px;
      transition: ease-in all 0.5s;
      margin-bottom: 30px;
+	 height: 91%;
 }
 
 .Machines .Machines-box:hover {
