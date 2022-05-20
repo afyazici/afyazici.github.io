@@ -395,15 +395,15 @@ button {
 	 background: #0e0f22;
 }
 
-.web_hosting {
+.img_exm {
      text-align: center;
 }
 
-.web_hosting figure {
+.img_exm figure {
      margin: 0;
 }
 
-.web_hosting p {
+.img_exm p {
      color: #e4ff00;
      font-size: 17px;
      line-height: 28px;
@@ -411,7 +411,7 @@ button {
 	 font-family: monospace;
 }
 
-.web_hosting a {
+.img_exm a {
      font-size: 16px;
      background-color: #000;
      color: #fff;
@@ -425,7 +425,7 @@ button {
      margin-top: 10px;
 }
 
-.web_hosting a:hover {
+.img_exm a:hover {
      background-color: #0c0f38;
      color: #fff;
 }
