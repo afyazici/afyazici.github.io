@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Network Services 2</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/networkservices2images/machines24.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/articles"> Articles</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="/machines/images/networkservices2images/machines24.png" style="height:300px;"></figure>
+					 <h2>Network Services 2</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+					 <h1>Task 1 Get Connected</h1>
+					 <p><strong>No answer needed</strong></p>
+				
+					 <h1>Task 2 Understanding NFS</h1>&nbsp;
+					 <h5>What does NFS stand for?<h5>
+					 <p>"Network File System"</p>
+					 <h5>What process allows an NFS client to interact with a remote directory as though it was a physical device?<h5>
+					 <p>"Mounting"</p>
+					 <h5>What does NFS use to represent files and directories on the server?<h5>
+					 <p>"file handle"</p>
+					 <h5>What protocol does NFS use to communicate between the server and client?</h5>
+					 <p>"Rpc"</p>
+					 <h5>What two pieces of user data does the NFS server take as parameters for controlling user permissions?</h5>
+					 <p>"user id / group id"</p>
+					 <h5>Can a Windows NFS server share files with a Linux client? (Y/N)</h5>
+					 <p>"Y"</p>
+					 <h5>Can a Linux NFS server share files with a MacOS client? (Y/N)</h5>
+					 <p>"Y"</p>
+					 <h5>What is the latest version of NFS? [released in 2016, but is still up to date as of 2020] This will require external research.</h5>
+					 <p>"4.2"</p>
+					 
+					 <h1>Task 3 Enumerating NFS</h1>&nbsp;
+					 <h5>Conduct a thorough port scan scan of your choosing, how many ports are open?</h5>
+					 <p>"7"</p>
+					 <h5>Which port contains the service we're looking to enumerate?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/1.PNG"/></figure>&nbsp;
+					 <p>"2049"</p>
+					 <h5>Now, use /usr/sbin/showmount -e [IP] to list the NFS shares, what is the name of the visible share?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/2.PNG"/></figure>&nbsp;
+					 <p>"/home"</p>
+					 <h5>Time to mount the share to our local machine! Change directory to where you mounted the share- what is the name of the folder inside?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/3.PNG"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/4.PNG"/></figure>&nbsp;
+					 <p>"cappucino"</p>
+					 <h5>Which of these keys is most useful to us?</h5>
+					 <p>"id_rsa"</p>
+					 <h5>Can we log into the machine using ssh -i <key-file> <username>@<ip> ? (Y/N)</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/5.PNG"/></figure>&nbsp;
+					 <p>"Y"</p>
+					 
+					 <h1>Task 4 Exploiting NFS</h1>&nbsp;
+					 <h5>What letter do we use to set the SUID bit set using chmod?</h5>
+					 <p>"s"</p>
+					 <h5>What letter do we use to set the SUID bit set using chmod?</h5>
+					 <p>"-rwsr-sr-x"</p>
+					 <h5>Great! If all's gone well you should have a shell as root! What's the root flag?</h5>
+					 <p>"THM{nfs_got_pwned}"</p>
+					 
+					 
+					 <h1>Task 5 Understanding SMTP</h1>&nbsp;
+					 
+					 <h5>What does SMTP stand for?</h5>
+					 <p>“Simple Mail Transfer Protocol”</p>					
+					 <h5>What does SMTP handle the sending of? (answer in plural)</h5>
+					 <p>“Emails”</p>
+					 <h5>What is the first step in the SMTP process?</h5>
+					 <p>“SMTP handshake”</p>
+					 <h5>What is the default SMTP port?</h5>
+					 <p>“25”</p>
+					 <h5>Where does the SMTP server send the email if the recipient's server is not available?</h5>
+					 <p>“SMTP queue”</p>
+					 <h5>On what server does the Email ultimately end up on?</h5>
+					 <p>“POP/IMAP”</p>
+					 <h5>Can a Linux machine run an SMTP server? (Y/N)</h5>
+					 <p>“Y”</p>
+					 <h5>Can a Windows machine run an SMTP server? (Y/N)</h5>
+					 <p>“Y”</p>
+
+
+
+					 <h1>Task 6 Enumerating SMTP</h1>&nbsp;
+					 <h5>First, lets run a port scan against the target machine, same as last time. What port is SMTP running on?</h5>
+					 <p>“25”</p>
+					 
+					 <h5>Okay, now we know what port we should be targeting, let's start up Metasploit. What command do we use to do this?</h5>
+					 <p>“msfconsole”</p>
+					 
+					 <h5>Let's search for the module "smtp_version", what's it's full module name?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/6.PNG"/></figure>&nbsp;
+					 <p>“auxiliary/scanner/smtp/smtp_version”</p>
+					 
+					 <h5>Great, now- select the module and list the options. How do we do this?</h5>
+					 <p>“Options”</p>
+					 
+					 <h5>Have a look through the options, does everything seem correct? What is the option we need to set?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/7.PNG"/></figure>&nbsp;
+					 <p>“rhosts”</p>
+					 
+					 <h5>Set that to the correct value for your target machine. Then run the exploit. What's the system mail name?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/8.PNG"/></figure>&nbsp;
+					 <p>"polosmtp.home”</p>
+					 
+					 <h5>What Mail Transfer Agent (MTA) is running the SMTP server? This will require some external research.</h5>
+					 <p>“postfix”</p>
+					 
+					 <h5>What option do we need to set to the wordlist's path?</h5>
+					 <p>“USER_FILE”</p>
+					 
+					 <h5>Once we've set this option, what is the other essential paramater we need to set?</h5>
+					 <p>“Rhosts”</p>
+					 
+					 <h5>Keep yourself hydrated!</h5>
+					 <p>No answer needed</p>
+					 
+					 
+					 <figure><img  src="/machines/images/networkservices2images/9.PNG"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/10.PNG"/></figure>&nbsp;&nbsp;&nbsp;
+					 <h5>Okay! Now that's finished, what username is returned?</h5>
+					 <p>“administrator”</p>
+					 
+					 
+					 
+					 
+					 
+					 <h1>Task 7 Exploiting SMTP</h1>&nbsp;
+					 <h6>The syntax for the command we're going to use to find the passwords is this:</h6>
+					 <h6><code>hydra -t 16 -l administrator -P /usr/share/wordlists/rockyou.txt -vV 10.10.88.11 ssh</code></h6>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/11.PNG"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/12.PNG"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/13.PNG"/></figure>&nbsp;
+					 <h5>What is the password of the user we found during our enumeration stage?</h5>
+					 <p>“alejandro”</p>
+					 <h5>Great! Now, let's SSH into the server as the user, what is contents of smtp.txt</h5>
+					 <p>"THM{who_knew_email_servers_were_c00l?}"</p>
+					 
+					 
+					 
+					 
+					 
+					 <h1>Task 8 Understanding MySQL</h1>&nbsp;
+					 <h5>What type of software is MySQL?</h5>
+					 <p>“relational database management system”</p>
+					 <h5>What language is MySQL based on?</h5>
+					 <p>“sql”</p>
+					 <h5>What communication model does MySQL use?</h5>
+					 <p>“client-server”</p>
+					 <h5>What is a common application of MySQL?</h5>
+					 <p>“back end database”</p>
+					 <h5>What major social network uses MySQL as their back-end database? This will require further research.</h5>
+					 <p>“Facebook”</p>
+					 
+					 
+					 
+					 <h1>Task 9 Enumerating MySQL</h1>&nbsp;
+					 <h5>As always, let's start out with a port scan, so we know what port the service we're trying to attack is running on. What port is MySQL using?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/14.PNG"/></figure>
+					 <p>"3306"</p>
+					 <h5>Search for, select and list the options it needs. What three options do we need to set?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/15.PNG"/></figure>
+					 <p>“password/rhosts/username”</p>
+					 <h5>Run the exploit. By default it will test with the "select version()" command, what result does this give you?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/16.PNG"/></figure>
+					 <p>“5.7.29-0ubuntu0.18.04.1”</p>
+					 <h5>Great! We know that our exploit is landing as planned. Let's try to gain some more ambitious information. Change the "sql" option to "show databases". how many databases are returned?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/17.PNG"/></figure>
+					 <p>“4”</p>
+					 
+					 
+					 
+					 
+					 
+					 <h1>Task 10 Exploiting MySQL</h1>&nbsp;
+					 
+					 <h5>First, let's search for and select the "mysql_schemadump" module. What's the module's full name?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/18.PNG"/></figure>
+					 <p>“auxiliary/scanner/mysql/mysql_schemadump”</p>
+					 
+					 <h5>Great! Now, you've done this a few times by now so I'll let you take it from here. Set the relevant options, run the exploit. What's the name of the last table that gets dumped?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/19.PNG"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/20.PNG"/></figure>
+					 <p>“x$waits_global_by_latency”</p>
+					 
+					 <h5>Awesome, you have now dumped the tables, and column names of the whole database. But we can do one better... search for and select the "mysql_hashdump" module. What's the module's full name?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/21.PNG"/></figure>
+					 <p>“auxiliary/scanner/mysql/mysql_hashdump”</p>
+					 
+					 <h5>Again, I'll let you take it from here. Set the relevant options, run the exploit. What non-default user stands out to you?</h5>&nbsp;
+					 <p>“carl”</p>
+					 
+					 <h5>What is the user/hash combination string?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/22.PNG"/></figure>
+					 <p>“carl:*EA031893AA21444B170FC2162A56978B8CEECE18”</p>
+					 
+					 <h5>Now, we need to crack the password! Let's try John the Ripper against it using: "john hash.txt" what is the password of the user we found?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/23.PNG"/></figure>
+					 <p>“doggie”</p>
+					 
+					 <h5>What's the contents of MySQL.txt?</h5>&nbsp;
+					 <figure><img  src="/machines/images/networkservices2images/24.PNG"/></figure>
+					 <p>“THM{congratulations_you_got_the_mySQL_flag}”</p>
+					 
+					 
+					 
+					 
+					 <h1>Task 11 Further Learning</h1>&nbsp;
+					 <h5>Congratulations! You did it!</h5>
+					 <p>No answer needed</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
