@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Burp Suite: The Basics</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/burpbasicsimages/machines27.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/articles"> Articles</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="/machines/images/burpbasicsimages/machines27.png" style="height:300px;"></figure>
+					 <h2>Burp Suite: The Basics</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+					 <h1>Task 1  Introduction Outline</h1>
+					 <h5>Deploy the machine.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 2  Getting Started What is Burp Suite?</h1>
+					 <h5>Which edition of Burp Suite will we be using in this module?</h5>
+					 <p>"Burp Suite Community"</p>&nbsp;
+					 <h5>Which edition of Burp Suite runs on a server and provides constant scanning for target web apps?</h5>
+					 <p>"Burp Suite Enterprise"</p>&nbsp;
+					 <h5>Burp Suite is frequently used when attacking web applications and ______ applications.</h5>
+					 <p>"Mobile"</p>&nbsp;
+					 
+					 <h1>Task 3  Getting Started Features of Burp Community</h1>
+					 <h5>Which Burp Suite feature allows us to intercept requests between ourselves and the target?</h5>
+					 <p>"Proxy"</p>&nbsp;
+					 <h5>Which Burp tool would we use if we wanted to bruteforce a login form?</h5>
+					 <p>"Intruder"</p>&nbsp;
+					 
+					 <h1>Task 4  Getting Started Installation</h1>
+					 <h5>If you have chosen not to use the AttackBox, make sure that you have a copy of Burp Suite installed before proceeding.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 5  Getting Started The Dashboard</h1>
+					 <h5>Open Burp Suite and have a look around the dashboard. Make sure that you are comfortable with it before moving on.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 6  Getting Started Navigation</h1>
+					 <h5>Get comfortable navigating around the top menu bars.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 7  Getting Started Options</h1>
+					 <h5>Change the Burp Suite theme to dark mode</h5>
+					 <p>No answer needed</p>&nbsp;
+					 <h5>In which Project options sub-tab can you find reference to a "Cookie jar"?</h5>
+					 <p>"Sessions"</p>&nbsp;
+					 <h5>In which User options sub-tab can you change the Burp Suite update behaviour?</h5>
+					 <p>"Misc"</p>&nbsp;
+					 <h5>What is the name of the section within the User options "Misc" sub-tab which allows you to change the Burp Suite keybindings?</h5>
+					 <p>"Hotkeys"</p>&nbsp;
+					 <h5>If we have uploaded Client-Side TLS certificates in the User options tab, can we override these on a per-project basis (Aye/Nay)?</h5>
+					 <p>"Aye"</p>&nbsp;
+					 <h5>There are many more configuration options available.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 8  Proxy Introduction to the Burp Proxy</h1>
+					 <h5>Which button would we choose to send an intercepted request to the target in Burp Proxy?</h5>
+					 <p>"Forward"</p>&nbsp;
+					 <h5>[Research] What is the default keybind for this?</h5>
+					 <p>"Ctrl+F"</p>
+					 
+					 <h1>Task 9  Proxy Connecting through the Proxy (FoxyProxy)</h1>
+					 <h5>The option is in a dropdown sub-menu.</h5>
+					 <p>"Response to this request"</p>&nbsp;
+					 <h5>[Bonus Question -- Optional] Try installing FoxyProxy standard and have a look at the pattern matching features.</h5>
+					 <p>No answer needed</p>
+					 
+					 <h1>Task 10  Proxy Proxying HTTPS</h1>
+					 <h5>certificate for TLS communication through the Burp Proxy.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1></h1>
+					 <h5>Using the in-built browser, make a request to http://MACHINE_IP/ and capture it in the proxy.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1></h1>
+					 <h5>Add http://MACHINE_IP/ to your scope and change the Proxy settings to only intercept traffic to in-scope targets.</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 13  Proxy Site Map and Issue Definitions</h1>
+					 <h5>What is the flag you receive?</h5>
+					 <figure><img  src="/machines/images/burpbasicsimages/1.png" style="height:300px;"></figure>
+					 <p>THM{NmNlZTliNGE1MWU1ZTQzMzgzNmFiNWVK}</p>&nbsp;
+					 <h5>Look through the Issue Definitions list. What is the typical severity of a Vulnerable JavaScript dependency?</h5>
+					 <p>"low"</p>
+					 
+					 <h1>Task 14  Practical Example Attack</h1>
+					 <h5>Congratulations, you bypassed the filter!</h5>
+					 <p>No answer needed</p>&nbsp;
+					 
+					 <h1>Task 15  Conclusion Room Conclusion</h1>
+					 <h5>I understand the fundamentals of using Burp Suite!</h5>
+					 <p>No answer needed</p>&nbsp;
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
