@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Pickle Rick</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/picklerickimages/machines29.jpeg" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/articles"> Articles</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="/machines/images/picklerickimages/machines29.jpeg" style="height:300px;"></figure>
+					 <h2>Pickle Rick</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+				  
+					 <figure><img  src="/machines/images/picklerickimages/1.png"/></figure>
+					 <figure><img  src="/machines/images/picklerickimages/2.png"/></figure>&nbsp;
+					 <h6>First of all, we start by using Nmap, nikto, ffuz, tools to collect active information for the machine.</h6>
+					 <h5>Nmap Output</h5>
+					 <figure><img  src="/machines/images/picklerickimages/3.png"/></figure>&nbsp;
+					 <h5>ffuf Output</h5>
+					 <figure><img  src="/machines/images/picklerickimages/4.png"/></figure>&nbsp;
+					 <h6>From the status codes in the ffuf output, we see that only the 'robots.txt' page is accessible.</h6>
+					 <h6>The robots.txt page is as follows.</h6>
+					 <figure><img  src="/machines/images/picklerickimages/5.png"/></figure>&nbsp;
+					 <h5>Nikto Output</h5>
+					 <figure><img  src="/machines/images/picklerickimages/6.png"/></figure>&nbsp;
+					 <h6>In the Nikto output, we see that there is a page named '/login.php' on the site.</h6>
+					 <h5>There is no useful information on the home page. But if we look at the source code, there is a username.</h5>
+
+					 
+					 <figure><img  src="/machines/images/picklerickimages/7.png"/></figure>&nbsp;
+					 <h6>The 'login.php' page is as follows.</h6>
+					 <figure><img  src="/machines/images/picklerickimages/8.png"/></figure>&nbsp;
+					 <h6>At this stage, I used tools such as burp and hydra to find the password, but I could not get a result.</h6>
+					 <h6>then robots.txt came to mind</h6>
+					 <figure><img  src="/machines/images/picklerickimages/9.png"/></figure>&nbsp;
+					 <h6>Login was successful when I tried…</h6>
+					 <h6>When we log in, we see the command panel. As you can see in the picture below, we can run the code in it.</h6>
+					 <figure><img  src="/machines/images/picklerickimages/10.png"/></figure>&nbsp;
+					 <h6>We see that the top file is one of the 3 files we are looking for.</h6>
+					 <h6>Some commands like cat aren't allowed but you can read the first ingredient (flag) using for example less:</h6>
+					 <figure><img  src="/machines/images/picklerickimages/11.png"/></figure>&nbsp;
+					 <h6>Thus, we get our 1st file.</h6>
+					 <h6>In the command panel, when we browse the files a little, we see the file named rick as follows.</h6>
+					 <figure><img  src="/machines/images/picklerickimages/12.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/picklerickimages/13.png"/></figure>&nbsp;
+					 <h6>We also get our second file.</h6>
+					 <figure><img  src="/machines/images/picklerickimages/14.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/picklerickimages/15.png"/></figure>&nbsp;
+					 <h6>The user ‘www-data’ can execute anything as sudo:</h6>
+					 <h6>So</h6>
+					 <figure><img  src="/machines/images/picklerickimages/16.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/picklerickimages/17.png"/></figure>&nbsp;
+					 
+					 
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+					 <h1>Task 1 Deploy the machine</h1>
+					 <p><strong>No answer needed</strong></p>
+				
+					 <h1>Task 2 Reconnaissance</h1>&nbsp;
+					 <<h5></h5>>Scan the box, how many ports are open?<<h5></h5>>&nbsp;
+					 
+					 <p>"6"</p>
+					 <<h5></h5>>What version of the squid proxy is running on the machine?</<h5></h5>>
+					 <p>"3.5.12"</p>
+					 <<h5></h5>>How many ports will nmap scan if the flag -p-400 was used?</<h5></h5>>
+					 <p>"400"</p>
+					 <<h5></h5>>Using the nmap flag -n what will it not resolve?</<h5></h5>>
+					 <p>"DNS"</p>
+					 <<h5></h5>>What is the most likely operating system this machine is running?</<h5></h5>>
+					 <p>"Ubuntu"</p>
+					 <<h5></h5>>What port is the web server running on?</<h5></h5>>
+					 <p>"3333"</p>
+					 
+					 
+					 <h1>Task 3 Locating directories using GoBuster</h1>&nbsp;
+					 <<h5></h5>>What is the directory that has an upload form page?</<h5></h5>>&nbsp;
+					 <figure><img  src="/machines/images/picklerickimages/2.png"/></figure>&nbsp;
+					 <p>"/internal"</p>
+					 
+					 
+					 
+					 
+					 
+					 <h1>Task 4 Compromise the webserver</h1>&nbsp;
+					 <<h5></h5>>Try upload a few file types to the server, what common extension seems to be blocked?</<h5></h5>>
+					 <p>".php"</p>
+					 <<h5></h5>>What extension is allowed?</<h5></h5>>
+					 <p>".phtml"</p>
+					 <<h5></h5>>What is the name of the user who manages the webserver?</<h5></h5>>&nbsp;
+					 <figure><img  src="/machines/images/picklerickimages/3.png"/></figure>&nbsp;
+					 <p>"Bill"</p>
+					 <<h5></h5>>What is the user flag?</<h5></h5>>
+					 <figure><img  src="/machines/images/picklerickimages/4.png"/></figure>&nbsp;
+					 <p>"8bd7992fbe8a6ad22a63361004cfcedb"</p>
+					 
+					 
+					 <h1>Task 5 Privilege Escalation</h1>&nbsp;
+					 
+					 <<h5></h5>>On the system, search for all SUID files. What file stands out?</<h5></h5>>&nbsp;<br>
+					 <code>find / -user root -perm -4000 -exec ls -ldb {} \;</code>&nbsp;
+					 <figure><img  src="/machines/images/picklerickimages/5.png"/></figure>&nbsp;
+					 <p>"/bin/systemctl"</p>
+					 <<h5></h5>>Become root and get the last flag (/root/root.txt)</<h5></h5>>&nbsp;
+					 <<h6></h6>>When we search for privilege escalation vulnerabilities for Systemctl, SUID, we find the following path.</<h6></h6>>&nbsp;
+					 <<h6></h6>>https://gtfobins.github.io/gtfobins/systemctl/</<h6></h6>>&nbsp;
+					 <figure><img  src="/machines/images/picklerickimages/6.png"/></figure>&nbsp;
+					 <p>"a58ff85790a9270368d33a9966c7fd5"</p>&nbsp;
+
+
+					
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
