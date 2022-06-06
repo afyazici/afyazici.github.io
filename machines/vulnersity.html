@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Vulnersity</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/vulnersityimages/machines28.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/articles"> Articles</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+				  <figure><img  src="/machines/images/vulnersityimages/machines28.png" style="height:300px;"></figure>
+					 <h2>Vulnersity</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="web_hosting">
+					 <h1>Task 1 Deploy the machine</h1>
+					 <p><strong>No answer needed</strong></p>
+				
+					 <h1>Task 2 Reconnaissance</h1>&nbsp;
+					 <h5>Scan the box, how many ports are open?<h5>
+					 <figure><img  src="/machines/images/vulnersityimages/1.png"/></figure>&nbsp;
+					 <p>"6"</p>
+					 <h5>What version of the squid proxy is running on the machine?</h5>
+					 <p>"3.5.12"</p>
+					 <h5>How many ports will nmap scan if the flag -p-400 was used?</h5>
+					 <p>"400"</p>
+					 <h5>Using the nmap flag -n what will it not resolve?</h5>
+					 <p>"DNS"</p>
+					 <h5>What is the most likely operating system this machine is running?</h5>
+					 <p>"Ubuntu"</p>
+					 <h5>What port is the web server running on?</h5>
+					 <p>"3333"</p>
+					 
+					 
+					 <h1>Task 3 Locating directories using GoBuster</h1>&nbsp;
+					 <h5>What is the directory that has an upload form page?</h5>
+					 <figure><img  src="/machines/images/vulnersityimages/2.png"/></figure>&nbsp;
+					 <p>"/internal"</p>
+					 
+					 
+					 
+					 
+					 
+					 <h1>Task 4 Compromise the webserver</h1>&nbsp;
+					 <h5>Try upload a few file types to the server, what common extension seems to be blocked?</h5>
+					 <p>".php"</p>
+					 <h5>What extension is allowed?</h5>
+					 <p>".phtml"</p>
+					 <h5>What is the name of the user who manages the webserver?</h5>
+					 <figure><img  src="/machines/images/vulnersityimages/3.png"/></figure>&nbsp;
+					 <p>"Bill"</p>
+					 <h5>What is the user flag?</h5>
+					 <figure><img  src="/machines/images/vulnersityimages/4.png"/></figure>&nbsp;
+					 <p>"8bd7992fbe8a6ad22a63361004cfcedb"</p>
+					 
+					 
+					 <h1>Task 5 Privilege Escalation</h1>&nbsp;
+					 
+					 <h5>On the system, search for all SUID files. What file stands out?</h5>
+					 <code>find / -user root -perm -4000 -exec ls -ldb {} \;</code>
+					 <figure><img  src="/machines/images/vulnersityimages/5.png"/></figure>&nbsp;
+					 <p>"/bin/systemctl"</p>
+					 <h5>Become root and get the last flag (/root/root.txt)</h5>
+					 <h6>When we search for privilege escalation vulnerabilities for Systemctl, SUID, we find the following path.</h6>
+					 <h6>https://gtfobins.github.io/gtfobins/systemctl/</h6>
+					 <figure><img  src="/machines/images/vulnersityimages/6.png"/></figure>&nbsp;
+					 <p>"a58ff85790a9270368d33a9966c7fd5"</p>
+
+
+					
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
