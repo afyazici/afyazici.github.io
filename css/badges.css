@@ -1,4 +1,21 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display:flex;
+  
+  align-items:center;
+  justify-content:center;  
+  height: 100vh;
+  margin: 0;
+  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color:#f4f6f8;
+}
+.badges{
   display:flex;
   
   align-items:center;
@@ -45,14 +62,14 @@
       
       z-index:-1;
     }
-    .container__info{
+    .badges__info{
       position:relative;
       
       line-height:1.8;
       transition:ease-in-out .3s;
       opacity:0;
     }
-    .container__location{
+    .badges__location{
       transition-delay: .15s;
     }
     &:hover{
@@ -69,10 +86,20 @@
         transform:scale(2.8) translate3d(-18%, 0px, 0px);
       }
       
-      .container__info{
+      .badges__info{
         transform:translate3d(-60%,0px,0px);
         opacity:1;
       }
     }
   }
+}
+.link{
+  border-bottom: 1px solid transparent;
+  color:#06C0A8;
+  text-decoration:none;
+  transition: ease-in .13s;
+  &:hover{
+     background-color: #06C0A8;
+     color:#ffffff;
+   }
 }
