@@ -98,50 +98,50 @@
 					 <h5>Dirb Output</h5>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/4.png"/></figure>&nbsp;
 					 
-					 <h5>We see that the "/content/as" page is the login page.</h5>
+					 <h6>We see that the "/content/as" page is the login page.</h5>
 					 <figure><img  src="/machines/images/lazyadminimages/5.png"/></figure>&nbsp;
 					 
 					 <h5>"/content" page:</h5>
 					 <figure><img  src="/machines/images/lazyadminimages/6.png"/></figure>&nbsp;
 					 
-					 <h6>Here we see that there is SweetRice on the site. </h6>&nbsp;
-					 <h6>If we search for "searchsploit sweetrice":</h6>&nbsp;
+					 <h5>Here we see that there is SweetRice on the site. </h6>&nbsp;
+					 <h5>If we search for "searchsploit sweetrice":</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/7.png"/></figure>&nbsp;
 					 
-					 <h6>When we search for this exploit on the Internet</h6>&nbsp;
+					 <h5>When we search for this exploit on the Internet</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/8.png"/></figure>&nbsp;
 					 
-					 <h6>When we go to the inc folder, we can see there it really is.</h6>&nbsp;
+					 <h5>When we go to the inc folder, we can see there it really is.</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/9.png"/></figure>&nbsp;
 					 
-					 <h6>In fact, we could find it just by navigating through the files that came up in the dirb scan. :D nvm</h6>&nbsp;
+					 <h5>In fact, we could find it just by navigating through the files that came up in the dirb scan. :D nvm</h6>&nbsp;
 					 <h6>Backup File</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/10.png"/></figure>&nbsp;
 					 
 					 <h6>Password:</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/11.png"/></figure>&nbsp;
 
-					 <h6>We log in to the /content/as page with the login information.</h6>&nbsp;
-					 <h6>When we browse the site a little bit, we realize that we can write code in the Ads tab.</h6>&nbsp;
-					 <h6>The machine accepts the .php extension </h6>&nbsp;
+					 <h5>We log in to the /content/as page with the login information.</h6>&nbsp;
+					 <h5>When we browse the site a little bit, we realize that we can write code in the Ads tab.</h6>&nbsp;
+					 <h5>The machine accepts the .php extension </h6>&nbsp;
 					 <h6>Reverseshell:</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/12.png"/></figure>&nbsp;
 					 
 					 <h6>Shell:</h6>&nbsp;
-					 <h6>Before executing the file, we listen to the port.</h6>&nbsp;
-					 <h6>We run the file and get the shell.</h6>&nbsp;
+					 <h5>Before executing the file, we listen to the port.</h6>&nbsp;
+					 <h5>We run the file and get the shell.</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/13.png"/></figure>&nbsp;
 					 <h6>First Flag:</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/14.png"/></figure>&nbsp;
 					 
 					 
 					 <h6>Privilege Escalation:</h6>&nbsp;
-					 <h6>When we run sudo -l, we find a file that we can run with root permission.</h6>&nbsp;
-					 <h6>When we print the file with “cat”, we see that it runs the file /etc/copy.sh.</h6>&nbsp;
-					 <h6>When we look inside the copy.sh file, we see a ready-made reverse shell code. (Lazy Admin…)</h6>&nbsp;
+					 <h5>When we run sudo -l, we find a file that we can run with root permission.</h6>&nbsp;
+					 <h5>When we print the file with “cat”, we see that it runs the file /etc/copy.sh.</h6>&nbsp;
+					 <h5>When we look inside the copy.sh file, we see a ready-made reverse shell code. (Lazy Admin…)</h6>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/15.png"/></figure>&nbsp;
-					 <h6>We edit the IP address and port, listen to the port from the host and run the code.</h6>&nbsp;
-					 <h6>Of course, we run the code with the path we have permission.</h6>&nbsp;
+					 <h5>We edit the IP address and port, listen to the port from the host and run the code.</h6>&nbsp;
+					 <h5>Of course, we run the code with the path we have permission.</h6>&nbsp;
 					 <p>sudo /usr/bin/perl /home/itguy/backup.pl</p>&nbsp;
 					 <figure><img  src="/machines/images/lazyadminimages/16.png"/></figure>&nbsp;
 					 <h6>Root Flag:</h6>&nbsp;
