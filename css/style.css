@@ -817,5 +817,32 @@ button {
 /** end footer **/
 
 
+.search-container {
+   margin: 20px;
+   text-align: center;
+}
 
+#search-bar {
+   padding: 10px;
+   width: 300px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+#search-button {
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+/* Arama sonuçları için stiller (görünümünü özelleştirmek için) */
+.search-result {
+   margin: 10px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
 
