@@ -859,3 +859,10 @@ p.code {
 }
 
 
+#no-results-message {
+   display: none;
+   background-color: #f0f0f0; /* Arka plan rengini ayarlayın */
+   padding: 10px;
+   text-align: center;
+   font-weight: bold;
+}
