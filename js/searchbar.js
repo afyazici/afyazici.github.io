@@ -22,4 +22,16 @@ document.getElementById("search-button").addEventListener("click", function() {
    } else {
       noResultsMessage.style.display = "none";
    }
+
+   // Sonuçları yan yana koymak için aşağıdaki kodu ekleyin
+   var visibleMachines = Array.from(machineElements).filter(function(machine) {
+      return machine.style.display !== "none";
+   });
+
+   var machinesContainer = document.querySelector(".Machines");
+   machinesContainer.innerHTML = "";
+
+   visibleMachines.forEach(function(machine) {
+      machinesContainer.appendChild(machine);
+   });
 });
