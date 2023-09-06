@@ -846,3 +846,14 @@ button {
    border-radius: 5px;
 }
 
+
+
+p.code {
+   font-family: "Courier New", monospace; /* Monospace bir yazı tipi kullanarak kodun düzgün görünmesini sağlar */
+   background-color: #f0f0f0; /* Arka plan rengi */
+   padding: 10px; /* Daha iyi görünüm için iç boşluk ekleyebilirsiniz */
+   border: 1px solid #ccc; /* Kenarlık eklemek isterseniz */
+   white-space: pre-wrap; /* Satır sonları ve boşlukları korumak için kullanılır */
+}
+
+
