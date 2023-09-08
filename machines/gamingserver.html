@@ -114,8 +114,8 @@
 					 <figure><img  src="/machines/images/gamingserverimages/8.png"/></figure>&nbsp;
 					 <h6>Let's download the rsa key and find the passphrase with dict.lst.<h6>&nbsp;
 					 <figure><img  src="/machines/images/gamingserverimages/9.png"/></figure>&nbsp;
-					 <p>ssh2john secretKey > secret.hash<p>
-					 <p>john –wordlist=dict.txt secret.hash<p>&nbsp;
+					 <p>ssh2john secretKey > secret.hash</p>
+					 <p>john –wordlist=dict.txt secret.hash</p>&nbsp;
 					 <figure><img  src="/machines/images/gamingserverimages/10.png"/></figure>&nbsp;
 					 <h6>Now we can log in to ssh. <h6>&nbsp;
 					 <figure><img  src="/machines/images/gamingserverimages/11.png"/></figure>&nbsp;
@@ -127,15 +127,15 @@
 					 <figure><img  src="/machines/images/gamingserverimages/14.png"/></figure>&nbsp;
 					 <h6>And run the following commands on John's machine.<h6>&nbsp;
 					 <figure><img  src="/machines/images/gamingserverimages/15.png"/></figure>&nbsp;
-					 <p>lxc image import ./alpine.tar.gz --alias myimage<p>&nbsp;
+					 <p>lxc image import ./alpine.tar.gz --alias myimage</p>&nbsp;
 					 <h6>This command imports a local Alpine Linux image (named "alpine.tar.gz" as a file) and assigns it the alias "myimage." This makes it easier to refer to this image later.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
-					 <p>lxc init myimage ignite -c security.privileged=true<p>&nbsp;
+					 <p>lxc init myimage ignite -c security.privileged=true</p>&nbsp;
 					 <h6>This command creates a container named "ignite" and configures it to use the "myimage" image as its base. Additionally, it sets the configuration option security.privileged=true, which means the container will run in "privileged" mode, giving it more permissions and control over the host system.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
-					 <p>lxc config device add ignite mydevice disk source=/ path=/mnt/root recursive=true<p>&nbsp;
+					 <p>lxc config device add ignite mydevice disk source=/ path=/mnt/root recursive=true</p>&nbsp;
 					 <h6>This command adds a disk device named "mydevice" to the "ignite" container. This device is connected to the host system's root file system (source=/) and mounts it inside the container at the /mnt/root path. The recursive=true option ensures that all files and directories under the source directory are transferred into the container.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
-					 <p>lxc start ignite<p>&nbsp;
+					 <p>lxc start ignite</p>&nbsp;
 					 <h6>This command starts the "ignite" container, allowing the operating system inside the container to begin running.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
-					 <p>lxc exec ignite /bin/sh<p>&nbsp;
+					 <p>lxc exec ignite /bin/sh</p>&nbsp;
 					 <h6>This command starts a /bin/sh shell inside the "ignite" container, allowing you to enter the container and run commands within it.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
 					 <figure><img  src="/machines/images/gamingserverimages/16.png"/></figure>&nbsp;
                   </div>
