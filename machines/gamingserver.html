@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Gaming Server</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/gamingserverimages/icon.jpeg" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/tools"> Tools</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  </div>
+               </div>
+            </div>
+            <div class>
+               <div class="col-md-12">
+                  <div class="web_hosting">
+				  <figure><img  src="/machines/images/gamingserverimages/0.png"/></figure>&nbsp;
+				  
+					 <h5>Nmap Output:</h5>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/1.png"/></figure>&nbsp;
+					 
+					 <h5>Home Page:</h5>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/2.png"/></figure>&nbsp;
+					 
+					 <h6>When we browse the site a little, we find the Uploads page. It's not hidden.</h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/3.png"/></figure>&nbsp;
+					 
+					 <h6>Dict.lst is a wordlist. There's a story in the manifest.txt file too :D</h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/4.png"/></figure>&nbsp;
+					 
+					 <h6>download dict.lst</h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/5.png"/></figure>&nbsp;
+					 
+					 <h6>When we browse the site a little more, we see the name John in the html code of the site.</h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/6.png"/></figure>&nbsp;
+					 
+					 <h6>At this stage, when I ssh bruteforce with hydra, I did not get any results. Let's continue scanning.</h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/7.png"/></figure>&nbsp;
+					 
+					 <h6>You can see the file named /secret/ in the dirb scan.<h6>&nbsp;
+					 <h6>When we go to the file, we see id_rsa.<h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/8.png"/></figure>&nbsp;
+					 <h6>Let's download the rsa key and find the passphrase with dict.lst.<h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/9.png"/></figure>&nbsp;
+					 <p>ssh2john secretKey > secret.hash<p>&nbsp;
+					 <p>john –wordlist=dict.txt secret.hash<p>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/10.png"/></figure>&nbsp;
+					 <h6>Now we can log in to ssh. <h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/11.png"/></figure>&nbsp;
+					 <h6>When we run the “id” command, we notice something strange.<h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/12.png"/></figure>&nbsp;
+					 <h6>Upon further research, I found lxd is a linux container manager, and can be used to mount the root folder on the host machine.<h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/13.png"/></figure>&nbsp;
+					 <h6>Let's send the file we built to John.<h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/14.png"/></figure>&nbsp;
+					 <h6>And run the following commands on John's machine.<h6>&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/15.png"/></figure>&nbsp;
+					 <p>lxc image import ./alpine.tar.gz --alias myimage<p>&nbsp;
+					 <h6>This command imports a local Alpine Linux image (named "alpine.tar.gz" as a file) and assigns it the alias "myimage." This makes it easier to refer to this image later.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
+					 <p>lxc init myimage ignite -c security.privileged=true<p>&nbsp;
+					 <h6>This command creates a container named "ignite" and configures it to use the "myimage" image as its base. Additionally, it sets the configuration option security.privileged=true, which means the container will run in "privileged" mode, giving it more permissions and control over the host system.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
+					 <p>lxc config device add ignite mydevice disk source=/ path=/mnt/root recursive=true<p>&nbsp;
+					 <h6>This command adds a disk device named "mydevice" to the "ignite" container. This device is connected to the host system's root file system (source=/) and mounts it inside the container at the /mnt/root path. The recursive=true option ensures that all files and directories under the source directory are transferred into the container.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
+					 <p>lxc start ignite<p>&nbsp;
+					 <h6>This command starts the "ignite" container, allowing the operating system inside the container to begin running.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
+					 <p>lxc exec ignite /bin/sh<p>&nbsp;
+					 <h6>This command starts a /bin/sh shell inside the "ignite" container, allowing you to enter the container and run commands within it.<h6>&nbsp;&nbsp;&nbsp;&nbsp;
+					 <figure><img  src="/machines/images/gamingserverimages/16.png"/></figure>&nbsp;
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
