@@ -851,7 +851,7 @@ button {
 /* Scrollbar genişliği ve arka plan rengi */
 body::-webkit-scrollbar {
     width: 12px;
-    background-color: #f1f1f1;
+    background-color: #000000;
 }
 
 /* Scrollbar thumb rengi ve yuvarlatma */
