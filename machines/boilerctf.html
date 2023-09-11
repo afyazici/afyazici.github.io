@@ -121,30 +121,30 @@
 					 <h6>The output of the command we entered into the URL appears below.</h6>&nbsp;
 					 
 					 <figure><img  src="/machines/images/boilerctfimages/12.png"/></figure>&nbsp;
-					 <h5>;cat log.txt<h5>&nbsp;
+					 <h5>;cat log.txt</h5>&nbsp;
 					 <figure><img  src="/machines/images/boilerctfimages/13.png"/></figure>&nbsp;
-					 <h6>ssh informations<h6>&nbsp;
-					 <h6>When we try the port in the log.txt file, we see that it is closed.<h6>&nbsp;
+					 <h6>ssh informations</h6>&nbsp;
+					 <h6>When we try the port in the log.txt file, we see that it is closed.</h6>&nbsp;
 					 
 					 <figure><img  src="/machines/images/boilerctfimages/14.png"/></figure>&nbsp;
-					 <h6>We did not see ssh in the Nmap scan. We need to scan again. “-p-“<h6>&nbsp;
-					 <h5>55007<h5>&nbsp;
+					 <h6>We did not see ssh in the Nmap scan. We need to scan again. “-p-“</h6>&nbsp;
+					 <h5>55007</h5>&nbsp;
 					 <figure><img  src="/machines/images/boilerctfimages/15.png"/></figure>&nbsp;
-					 <h6>let's login<h6>&nbsp;
+					 <h6>let's login</h6>&nbsp;
 					 <figure><img  src="/machines/images/boilerctfimages/16.png"/></figure>&nbsp;
-					 <h6>When we look at the files, we see the backup.sh file.<h6>&nbsp;
-					 <h6>When we read it with the "cat" command, the USER=stoner line draws our attention. and the password is on the bottom line.<h6>&nbsp;
+					 <h6>When we look at the files, we see the backup.sh file.</h6>&nbsp;
+					 <h6>When we read it with the "cat" command, the USER=stoner line draws our attention. and the password is on the bottom line.</h6>&nbsp;
 					 <figure><img  src="/machines/images/boilerctfimages/17.png"/></figure>&nbsp;
-					 <h6>When we switch to the Stoner user, we can obtain user.txt.<h6>&nbsp;
+					 <h6>When we switch to the Stoner user, we can obtain user.txt.</h6>&nbsp;
 					 <figure><img  src="/machines/images/boilerctfimages/18.png"/></figure>&nbsp;
-					 <h6>when we run "sudo -l" we get "/NotThisTime/MessinWithYa"....<h6>&nbsp;
+					 <h6>when we run "sudo -l" we get "/NotThisTime/MessinWithYa"....</h6>&nbsp;
 					 <figure><img  src="/machines/images/boilerctfimages/19.png"/></figure>&nbsp;
-					 <h6>Now time to use find to search for the the files whose SUID bits is set.<h6>&nbsp;
-					 <h6>SUID (Set owner User ID up on execution) is a special type of file permissions given to a file. Normally in Linux/Unix when a program runs, it inherits access permissions from the logged in user. SUID is defined as giving temporary permissions to a user to run a program/file with the permissions of the file owner rather that the user who runs it.<h6>&nbsp;
-					 <p>find / -perm /4000 -type f -exec ls -ld {} \; 2>/dev/null<p>&nbsp;
+					 <h6>Now time to use find to search for the the files whose SUID bits is set.</h6>&nbsp;
+					 <h6>SUID (Set owner User ID up on execution) is a special type of file permissions given to a file. Normally in Linux/Unix when a program runs, it inherits access permissions from the logged in user. SUID is defined as giving temporary permissions to a user to run a program/file with the permissions of the file owner rather that the user who runs it.</h6>&nbsp;
+					 <p>find / -perm /4000 -type f -exec ls -ld {} \; 2>/dev/null</p>
 					 <figure><img  src="/machines/images/boilerctfimages/20.png"/></figure>&nbsp;
-					 <h6>In the list there is find commnad which have SUID bit set which means we can run find as root user. Using -exec flag as shown above. Let’s try out by changing the permission of root directory.<h6>&nbsp;
-					 <p>find . -exec chmod 777 /root \;<p>&nbsp;
+					 <h6>In the list there is find commnad which have SUID bit set which means we can run find as root user. Using -exec flag as shown above. Let’s try out by changing the permission of root directory.</h6>&nbsp;
+					 <p>find . -exec chmod 777 /root \;</p>
 					 <figure><img  src="/machines/images/boilerctfimages/21.png"/></figure>&nbsp;
                   </div>
                </div>
