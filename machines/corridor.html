@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>h4ck3d</title>
+      <title>Corridor</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -19,7 +19,7 @@
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="/machines/images/h4ck3dimages/icon.png" type="image/gif" />
+      <link rel="icon" href="/machines/images/corridorimages/icon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
@@ -86,24 +86,27 @@
             <div class>
                <div class="col-md-12">
                   <div class="web_hosting">
-				  <figure><img  src="/machines/images/h4ck3dimages/0.png"/></figure>&nbsp;
-					  <a href="/machines/images/h4ck3dimages/Capture.pcapng">Pcap File..</a>&nbsp;
-					 <h6>Now that we have analyzed Pcap, we can start directly with brute-force.</h6>&nbsp;
-					 <figure><img  src="/machines/images/h4ck3dimages/1.png"/></figure>&nbsp;
-					 <h6>Let's log in to FTP with the password we found.</h6>&nbsp;
-					 <figure><img  src="/machines/images/h4ck3dimages/2.png"/></figure>&nbsp;
-					 <h6>Let's transfer the Shell.php file in FTP to our own machine, edit the IP address and port according to ourselves, and send it back to the machine.</h6>&nbsp;
-					 <p>put shell.php</p>
-					 <h6>Before running the Shell.php file from the web page, let's listen to the port we specified for the Shell.</h6>&nbsp;
-					 <figure><img  src="/machines/images/h4ck3dimages/3.png"/></figure>&nbsp;
-					 <h6>We logged in the machine as www-data. Since we know Jenny's password, let's login to the Jenny user.</h6>&nbsp;
+				  <figure><img  src="/machines/images/corridorimages/0.png"/></figure>&nbsp;
+				  
+					<h5>Nmap Output:</h5>&nbsp;
 					 
-					 <figure><img  src="/machines/images/h4ck3dimages/4.png"/></figure>&nbsp;
-					 <h6>We see that user Jenny can use the sudo command for (ALL : ALL).</h6>&nbsp;
-					 <h6>Then we just run “sudo su”.</h6>&nbsp;
-					 <figure><img  src="/machines/images/h4ck3dimages/5.png"/></figure>&nbsp;
-					 <h6>We are root.</h6>&nbsp;
-					 <figure><img  src="/machines/images/h4ck3dimages/6.png"/></figure>&nbsp;
+					 <figure><img  src="/machines/images/corridorimages/1.png"/></figure>&nbsp;
+					 <h6>Dirb scan turned up nothing.</h6>&nbsp;
+					 <h6>Let's view the web page.</h6>&nbsp;
+					 <figure><img  src="/machines/images/corridorimages/2.png"/></figure>&nbsp;
+					 <h6>Each door opens to another page.</h6>&nbsp;
+					 <h6>and the source code is as follows.</h6>&nbsp;
+					 
+					 <figure><img  src="/machines/images/corridorimages/3.png"/></figure>&nbsp;
+					 <h6>Let's ask any hash to hash-identifier.</h6>&nbsp;
+					 <figure><img  src="/machines/images/corridorimages/4.png"/></figure>&nbsp;
+					 <h6>When we solve all the hashes with MD5, we see that the numbers are in order from 1 to 13.</h6>&nbsp;
+					 <h6>In fact, it is enough to crack only 2 hashes for idor.</h6>&nbsp;
+					 <h6>Numbers like -1,0,1 are typically unique when referring to the IDOR vulnerability because admin or test accounts are frequently present at these endpoints. Just try to visit those endpoints by obtaining the MD5 hash of these individual integers(https://<IP>/md5-string-of- [-1,0,1]) and we will get our flag.</h6>&nbsp;
+					 <figure><img  src="/machines/images/corridorimages/5.png"/></figure>&nbsp;
+					 
+					 
+					 
                   </div>
                </div>
             </div>
